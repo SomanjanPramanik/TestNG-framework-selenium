@@ -116,7 +116,7 @@ public class WebCommons {
 	}
 
 	// method to take screenshot of window
-	public static String takeWindowScreenshot(WebDriver driver, String screenshotNameAndFromat) throws IOException {
+	public String takeWindowScreenshot(WebDriver driver, String screenshotNameAndFromat) throws IOException {
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + screenshotNameAndFromat;
 		File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(screenshotPath));
@@ -124,7 +124,7 @@ public class WebCommons {
 	}
 
 	// method to take screenshot of element
-	public static String takeElementScreenshot(WebElement element, String screenshotNameAndFromat) throws IOException {
+	public String takeElementScreenshot(WebElement element, String screenshotNameAndFromat) throws IOException {
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + screenshotNameAndFromat;
 		File screenshotFile = element.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshotFile, new File(screenshotPath));
