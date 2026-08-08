@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -16,10 +18,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.creatio.crm.framework.base.BasePage;
+import com.creatio.crm.framework.reports.Reports;
 import com.creatio.crm.framework.utilities.PropUtils;
 
 public class WebCommons {
@@ -104,13 +109,13 @@ public class WebCommons {
 	}
 
 	// method to wait using explicit wait - wait for element
-	public void waitForElement(WebElement element, int seconds) {
+	public void waitForElementToBeVisible(WebElement element, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	// method to wait using explicit wait - wait for element
-	public void waitForElement(By loactor, int seconds) {
+	public void waitForElementToBeMoreThan(By loactor, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(loactor, 0));
 	}
@@ -161,6 +166,66 @@ public class WebCommons {
 		SimpleDateFormat sdf = new SimpleDateFormat(format);
 		String uniqueId = sdf.format(Calendar.getInstance().getTime());
 		return uniqueId;
+	}
+
+	// generic method to click on a dropdown element from a list, matching by
+	// visible text
+	public void selectFromList(List<WebElement> elements, String textToMatch) {
+		for (WebElement element : elements) {
+			if (element.getText().trim().equalsIgnoreCase(textToMatch)) {
+				click(element); // reuses your existing scrollToElement + click
+				Reports.logger.pass("Selected: " + textToMatch);
+				return;
+			}
+		}
+		Reports.logger.warning("No matching element found for: " + textToMatch);
+		throw new RuntimeException("No matching element found for: " + textToMatch);
+	}
+
+	// wait to load image in DOM
+	public void waitToLoadImage(WebElement element) {
+
+		// Custom wait using JS so that it waits until really image loads
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10))
+				.pollingEvery(Duration.ofSeconds(2));
+
+		wait.until((driver -> {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			return (Boolean) js.executeScript("return arguments[0].complete && "
+					+ "typeof arguments[0].naturalWidth !='undefined' && " + "arguments[0].naturalWidth>0", element);
+		}));
+
+	}
+
+	// method to get current windowHandle
+	public String getCurrentWindowHandle() {
+		return driver.getWindowHandle();
+	}
+
+	// method to get All windowHandles
+	public Set<String> getWindowHandles() {
+		return driver.getWindowHandles();
+	}
+
+	// method to switch to specific tab
+	public void switchTab(String windowHandleId) {
+		driver.switchTo().window(windowHandleId);
+	}
+
+	// method to auto switch to new tab
+	public void autoSwitchTab() {
+		Set<String> windowHandles = getWindowHandles();
+		for (String windows : windowHandles) {
+			if (!getCurrentWindowHandle().contains(windows)) {
+				// The id which isn't the current one switch to that id
+				driver.switchTo().window(windows);
+			}
+		}
+	}
+
+	// method to close current window
+	public void close() {
+		driver.close();
 	}
 
 }

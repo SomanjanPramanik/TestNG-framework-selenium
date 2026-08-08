@@ -45,6 +45,6 @@ public class BasePage {
 	
 	// method to update browser session
 	public void setDriver(WebDriver newDriver) {
-		driver =newDriver ;		
+		driver = newDriver ;		
 	}
 }
