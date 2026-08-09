@@ -1,5 +1,7 @@
 package com.creatio.crm.application.elements;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -52,5 +54,98 @@ public class CookiesConsentElement {
 	// Cookies consent showDetailsButton
 	@FindBy(xpath = "//a[@id='CybotCookiebotDialogBodyEdgeMoreDetailsLink']")
 	public WebElement showDetailsButton;
+
+	// -----Cookie pop up------
+
+	// Details
+	@FindBy(xpath = "//a[@id='CybotCookiebotDialogNavDetails']")
+	public WebElement details;
+
+	// Consent
+	@FindBy(xpath = "//a[@id='CybotCookiebotDialogNavDeclaration']")
+	public WebElement consent;
+
+	// About
+	@FindBy(xpath = "//a[@id='CybotCookiebotDialogNavAbout']")
+	public WebElement about;
+
+	// About paragraph text
+	@FindBy(xpath = "//div[@role='paragraph']")
+	public WebElement aboutParagraph;
+
+	// Privacy policy link text
+	@FindBy(xpath = "//a[@href='https://www.creatio.com/privacy-policy']")
+	public WebElement privacyPolicyLink;
+
+	// Necessary text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieContainerNecessaryCard']")
+	public WebElement necessaryCookieCard;
+
+	// Necessary Dialog
+	@FindBy(xpath = "//button[@id='CybotCookiebotDialogDetailBodyContentCookieContainerNecessary']")
+	public WebElement necessaryDialogButton;
+
+	// Grab ALL cookie group list items
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieTabsNecessary']/div/ul/li")
+	public List<WebElement> necessaryCookieItems;
+
+	// Preferences text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieContainerPreferenceCard']")
+	public WebElement preferencesCookieCard;
+
+	// Preferences Dialog
+	@FindBy(xpath = "//button[@id='CybotCookiebotDialogDetailBodyContentCookieContainerPreference']")
+	public WebElement preferencesDialogButton;
+
+	// Grab ALL cookie group list items
+	@FindBy(xpath = "//div[@ip='CybotCookiebotDialogDetailBodyContentCookieTabsPreference']/div/ul/li")
+	public List<WebElement> PreferencesCookieItems;
+
+	// Marketing text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieContainerAdvertisingCard']")
+	public WebElement marketingCookieCard;
+
+	// Marketing Dialog
+	@FindBy(xpath = "//button[@id='CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising']")
+	public WebElement marketingDialogButton;
+
+	// Grab ALL cookie group list items
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieTabsAdvertising']/div/ul/li")
+	public List<WebElement> marketingCookieItems;
+
+	// Unclassified text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieContainerUnclassifiedCard']")
+	public WebElement unclassifiedCookieCard;
+
+	// Unclassified Dialog
+	@FindBy(xpath = "//button[@id='CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified']")
+	public WebElement unclassifiedDialogButton;
+
+	// Grab ALL cookie group list items
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieTabsUnclassified']/div/ul/li")
+	public List<WebElement> unclassifiedCookieItems;
+
+	// Cross domain consent text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBulkConsent']")
+	public WebElement crossDomainconsentCard;
+
+	// Cross domain consent dialog
+	@FindBy(xpath = "//a[@id='CybotCookiebotDialogDetailBulkConsentLink']")
+	public WebElement crossDomainconsentDialogButton;
+
+	// Cross domain consent dialog text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBulkConsentListWrapper']/span")
+	public WebElement crossDomainconsentDialogText;
+
+	// Grab ALL cookie group list items
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBulkConsentListWrapper']/dl/dt")
+	public List<WebElement> crossDomainconsentItems;
+
+	// Cookie update text
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailFooter']")
+	public WebElement cookieUpdateText;
 	
+	// CookieBot link in update
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailFooter']/a[contains(@href,'www.cookiebot.com')]")
+	public WebElement cookieBotLink;
 }
