@@ -28,7 +28,7 @@ public class LoginPageElements {
 	// Forgot password link
 	@FindBy(xpath = "//div[@class='form-link']/a[@href='/user/password?destination=corp/com']")
 	public WebElement forgotPasswordInitial;
-	
+
 	// Login submit button
 	@FindBy(xpath = "//input[@id='edit-submit']")
 	public WebElement loginButton;
@@ -37,11 +37,15 @@ public class LoginPageElements {
 	@FindBy(xpath = "//div[@class='messages__content']")
 	public WebElement errorMessage;
 
+	// Forgot password message entering invalid credential
+	@FindBy(xpath = "//div[@class='messages__content']")
+	public WebElement forgotPasswordMessage;
+
 	// Forgot password link after entering invalid credential
 	@FindBy(xpath = "//a[@href='/user/password']")
 	public WebElement forgotPasswordAfterError;
-	
-	// Create new account 
+
+	// Create new account
 	@FindBy(xpath = "//a[@href='/user/register?destination=corp/com']")
 	public WebElement createNewAccount;
 

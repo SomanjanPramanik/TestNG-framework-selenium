@@ -80,6 +80,30 @@ public class WebCommons {
 		}
 	}
 
+	// method to log the text of every element in a list, tagged "info"
+	public void logElementList(String listName, List<WebElement> items) {
+	    Reports.printInReport("info", listName + " (" + items.size() + " items):");
+	    for (WebElement item : items) {
+	        Reports.printInReport("info", "- " + getElementText(item));
+	    }
+	}
+
+	// closes the current (extra) tab and switches back to the given original tab
+	public void closeCurrentTabAndSwitchBack(String originalHandle) {
+	    driver.close();
+	    switchTab(originalHandle);
+	}
+	
+	// method to verify a page loaded by checking its header (and optional sub-header) is visible
+	public void verifyPageLoaded(WebElement headerText, WebElement subHeaderText) {
+	    waitForElementToBeVisible(headerText, 10);
+	    boolean isLoaded = isElementDisplayed(headerText);
+
+	    String subHeaderInfo = (subHeaderText != null) ? " | Sub-header: " + getElementText(subHeaderText) : "";
+	    Reports.printInReport(isLoaded ? "pass" : "fail",
+	            "Page loaded: " + isLoaded + ". Header: " + getElementText(headerText) + subHeaderInfo);
+	}
+	
 	// method to select option from dropdown
 	public void selectOption(WebElement dropdown, String selectBy, String option) {
 		scrollToElement(dropdown);
@@ -88,8 +112,7 @@ public class WebCommons {
 			s.selectByVisibleText(option);
 		} else if (selectBy.equalsIgnoreCase("value")) {
 			s.selectByValue(option);
-		}
-		if (selectBy.equalsIgnoreCase("index")) {
+		} else if (selectBy.equalsIgnoreCase("index")) {
 			s.selectByIndex(Integer.parseInt(option));
 		}
 	}
@@ -173,7 +196,7 @@ public class WebCommons {
 	public void selectFromList(List<WebElement> elements, String textToMatch) {
 		for (WebElement element : elements) {
 			if (element.getText().trim().equalsIgnoreCase(textToMatch)) {
-				click(element); // reuses your existing scrollToElement + click
+				click(element);
 				Reports.logger.pass("Selected: " + textToMatch);
 				return;
 			}
@@ -226,6 +249,18 @@ public class WebCommons {
 	// method to close current window
 	public void close() {
 		driver.close();
+	}
+
+	// method to wait using explicit wait - wait for element
+	public void waitForElementToClickable(WebElement element, int seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	// wait and click element
+	public void waitAndClick(WebElement element, int seconds) {
+		waitForElementToClickable(element, seconds); // Automatically waits for visibility first!
+		click(element);
 	}
 
 }

@@ -98,8 +98,8 @@ public class CookiesConsentElement {
 	public WebElement preferencesDialogButton;
 
 	// Grab ALL cookie group list items
-	@FindBy(xpath = "//div[@ip='CybotCookiebotDialogDetailBodyContentCookieTabsPreference']/div/ul/li")
-	public List<WebElement> PreferencesCookieItems;
+	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieTabsPreference']/div/ul/li")
+	public List<WebElement> preferencesCookieItems;
 
 	// Marketing text
 	@FindBy(xpath = "//div[@id='CybotCookiebotDialogDetailBodyContentCookieContainerAdvertisingCard']")

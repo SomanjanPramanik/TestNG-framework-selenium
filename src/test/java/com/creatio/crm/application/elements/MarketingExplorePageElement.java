@@ -3,7 +3,7 @@ package com.creatio.crm.application.elements;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MarketingExplorePage {
+public class MarketingExplorePageElement {
 
 	 //header text
 	  @FindBy(xpath="//h1[contains(@class,'ts-title ts-title_h1 marketing cols-title typewriter')]")

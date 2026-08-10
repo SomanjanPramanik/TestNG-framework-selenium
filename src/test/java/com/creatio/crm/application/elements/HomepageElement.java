@@ -8,9 +8,17 @@ public class HomepageElement {
 	// Header text
 	@FindBy(xpath = "//h1[contains(@class,'typewriter_completed')]")
 	public WebElement headerText;
-
-	// Demo Button @FindBy(xpath="//a[contains(text(),'Get a demo') and @class =
-	// 'ts_btn ts_btn__theme-orange link-anchor']")
+	
+	// logo 
+	@FindBy(xpath="//div[@id='sticky-wrapper']//div[@class='creatio-header-menu']//img[contains(@class,'no-b-lazy')]")
+    public WebElement logo;
+	
+	//Log in in homepage
+	@FindBy(xpath="//a[@class='user-menu__link' and contains(@href,'login')]")
+	public WebElement login;
+	
+	// Demo Button
+	@FindBy(xpath = "//a[contains(text(),'Get a demo') and @class ='ts_btn ts_btn__theme-orange link-anchor']")
 	public WebElement demoButton;
 
 	// Explore Orange Button
@@ -47,14 +55,14 @@ public class HomepageElement {
 	@FindBy(xpath = "//div[@class='cr-products__text typewriter typewriter_completed' "
 			+ "and text()='Delight customers and drive service excellence.']")
 	public WebElement serviceText;
-	
+
 	// img for each button selected
-	@FindBy(xpath="//div[contains(@class,'cr-products__item_default') "
+	@FindBy(xpath = "//div[contains(@class,'cr-products__item_default') "
 			+ "and contains(@class,'active')]//div[@class='ts-product-screen__bg']//img")
 	public WebElement productImg;
-	
-	// explore button under marketing sales service 
-	@FindBy(xpath="//div[contains(@class,'cr-products__item cr-products__item_default') "
+
+	// explore button under marketing sales service
+	@FindBy(xpath = "//div[contains(@class,'cr-products__item cr-products__item_default') "
 			+ "and contains(@class,'active')]/div//div[contains(@class,'cr-products__link')]//a")
 	public WebElement exploreproduct;
 }

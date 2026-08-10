@@ -58,6 +58,18 @@ public class SignUpPageElement {
 	// Company fields label
 	@FindBy(xpath = "//label[@for='edit-field-company-0-value']")
 	public WebElement companyFieldLabel;
+	
+	// Country field dropdown toggle (the visible "Country" box, not the phone flag one)
+	@FindBy(xpath = "//span[@id='select2-edit-field-country-container']")
+	public WebElement countryDropdownToggle;
+
+	// Search box that appears inside the dropdown after opening
+	@FindBy(xpath = "//input[@class='select2-search__field']")
+	public WebElement countrySearchInput;
+
+	// Filtered country options shown in the results list
+	@FindBy(xpath = "//ul[@id='select2-edit-field-country-results']/li[contains(@class,'select2-results__option--selectable')]")
+	public List<WebElement> countryOptions;
 
 	// City field
 	@FindBy(xpath = "//input[@id='edit-field-city-0-value']")
@@ -66,10 +78,14 @@ public class SignUpPageElement {
 	// City Field label
 	@FindBy(xpath = "//label[@for='edit-field-city-0-value']")
 	public WebElement cityFieldlabel;
-
-	// Phone field country Dropdown options
-	@FindBy(xpath = "//ul[@id='select2-edit-field-country-results']/li")
-	public List<WebElement> countryDropdownOptions;
+	
+	// Click this to open the country code dropdown
+	@FindBy(xpath = "//div[contains(@class, 'iti__selected-flag')]")
+	public WebElement phoneCountryDropdownToggle;
+	
+	// Grabs only the actual clickable countries, ignoring the divider!
+	@FindBy(xpath = "//ul[@id='country-listbox']/li[contains(@class, 'iti__country')]")
+	public List<WebElement> phoneCountryOptions;
 
 	// Phone field
 	@FindBy(xpath = "//input[@id='edit-field-phone-0-value']")
