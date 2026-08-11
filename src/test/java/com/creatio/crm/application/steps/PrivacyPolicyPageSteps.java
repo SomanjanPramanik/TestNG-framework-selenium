@@ -16,7 +16,7 @@ public class PrivacyPolicyPageSteps extends PrivacyPolicyPageElement {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Verifies the Privacy Policy page loaded by checking the header
+	// Verify privacy policy page loaded successfully
 	public void verifyPageLoaded() {
 		selenium.waitForElementToBeVisible(header, 10);
 		boolean isLoaded = selenium.isElementDisplayed(header);
@@ -25,13 +25,13 @@ public class PrivacyPolicyPageSteps extends PrivacyPolicyPageElement {
 		Reports.printInReport("pass", "Privacy Policy page loaded. Header: " + selenium.getElementText(header));
 	}
 
-	// Verifies and logs the introduction text of the policy
+	// Verify intro text
 	public void verifyIntroText() {
 		selenium.waitForElementToBeVisible(introText, 10);
 		Reports.printInReport("info", "Intro text: " + selenium.getElementText(introText));
 	}
 
-	// Verifies and logs all the section and subsection headings
+	// Verify and log headings
 	public void verifyAndLogHeadings() {
 		selenium.logElementList("Section headings", sectionHeadings);
 		selenium.logElementList("Subsection headings", subsectionHeadings);

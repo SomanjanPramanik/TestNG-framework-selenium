@@ -10,9 +10,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	public static String[][] excelReadData(String filePath, String sheetName) {
+	public static String[][] excelReadData(String ExcelfileName, String sheetName) {
 		String[][] data = null;
-		try (FileInputStream file = new FileInputStream(filePath);
+		try (FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\TestData\\ExcelFiles\\"+ExcelfileName);
 				XSSFWorkbook workbook = new XSSFWorkbook(file)) {
 			XSSFSheet sheet = workbook.getSheet(sheetName);
 			if (sheet == null) {

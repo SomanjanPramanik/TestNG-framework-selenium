@@ -2,6 +2,7 @@ package com.creatio.crm.application.elements;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -60,16 +61,17 @@ public class SignUpPageElement {
 	public WebElement companyFieldLabel;
 	
 	// Country field dropdown toggle (the visible "Country" box, not the phone flag one)
-	@FindBy(xpath = "//span[@id='select2-edit-field-country-container']")
+	@FindBy(xpath = "//span[@role='combobox' and @aria-labelledby='select2-edit-field-country-container']")
 	public WebElement countryDropdownToggle;
 
 	// Search box that appears inside the dropdown after opening
 	@FindBy(xpath = "//input[@class='select2-search__field']")
 	public WebElement countrySearchInput;
-
+	
 	// Filtered country options shown in the results list
 	@FindBy(xpath = "//ul[@id='select2-edit-field-country-results']/li[contains(@class,'select2-results__option--selectable')]")
 	public List<WebElement> countryOptions;
+	public By countryResultsLocator = By.xpath("//ul[@id='select2-edit-field-country-results']/li[contains(@class,'select2-results__option--selectable')]");
 
 	// City field
 	@FindBy(xpath = "//input[@id='edit-field-city-0-value']")

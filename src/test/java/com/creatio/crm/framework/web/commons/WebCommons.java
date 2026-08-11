@@ -10,6 +10,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -22,6 +23,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.creatio.crm.framework.base.BasePage;
 import com.creatio.crm.framework.reports.Reports;
@@ -42,7 +44,7 @@ public class WebCommons {
 	// method to scroll to element
 	public void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView()", element);
+		js.executeScript("arguments[0].scrollIntoView({block: 'center'})", element);
 	}
 
 	// method to click on element
@@ -82,28 +84,42 @@ public class WebCommons {
 
 	// method to log the text of every element in a list, tagged "info"
 	public void logElementList(String listName, List<WebElement> items) {
-	    Reports.printInReport("info", listName + " (" + items.size() + " items):");
-	    for (WebElement item : items) {
-	        Reports.printInReport("info", "- " + getElementText(item));
-	    }
+		Reports.printInReport("info", listName + " (" + items.size() + " items):");
+		for (WebElement item : items) {
+			Reports.printInReport("info", "- " + getElementText(item));
+		}
 	}
 
 	// closes the current (extra) tab and switches back to the given original tab
 	public void closeCurrentTabAndSwitchBack(String originalHandle) {
-	    driver.close();
-	    switchTab(originalHandle);
+	    if (driver.getWindowHandles().size() > 1) {
+	        driver.close();
+	        switchTab(originalHandle);
+	    }
 	}
 	
-	// method to verify a page loaded by checking its header (and optional sub-header) is visible
-	public void verifyPageLoaded(WebElement headerText, WebElement subHeaderText) {
-	    waitForElementToBeVisible(headerText, 10);
-	    boolean isLoaded = isElementDisplayed(headerText);
+	// method to navigate back in browser history
+	public void navigateBack() {
+	    driver.navigate().back();
+	}
 
-	    String subHeaderInfo = (subHeaderText != null) ? " | Sub-header: " + getElementText(subHeaderText) : "";
-	    Reports.printInReport(isLoaded ? "pass" : "fail",
-	            "Page loaded: " + isLoaded + ". Header: " + getElementText(headerText) + subHeaderInfo);
+	// method to verify a page loaded by checking its header (and optional
+	// sub-header) is visible
+	public void verifyPageLoaded(WebElement headerText, WebElement subHeaderText) {
+
+		// Verify the main header (which is always required)
+		waitForElementToBeVisible(headerText, 10);
+		Assert.assertTrue(isElementDisplayed(headerText), "CRITICAL FAILURE: Page header did not load");
+		Reports.printInReport("pass", "Page loaded successfully. Header: " + getElementText(headerText));
+
+		// Verify the sub-header (but only if one was passed in)
+		if (subHeaderText != null) {
+			waitForElementToBeVisible(subHeaderText, 10);
+			Assert.assertTrue(isElementDisplayed(subHeaderText), "CRITICAL FAILURE: Page sub-header did not load");
+			Reports.printInReport("pass", "Sub-header is visible: " + getElementText(subHeaderText));
+		}
 	}
-	
+
 	// method to select option from dropdown
 	public void selectOption(WebElement dropdown, String selectBy, String option) {
 		scrollToElement(dropdown);
@@ -194,15 +210,20 @@ public class WebCommons {
 	// generic method to click on a dropdown element from a list, matching by
 	// visible text
 	public void selectFromList(List<WebElement> elements, String textToMatch) {
-		for (WebElement element : elements) {
-			if (element.getText().trim().equalsIgnoreCase(textToMatch)) {
-				click(element);
-				Reports.logger.pass("Selected: " + textToMatch);
-				return;
-			}
-		}
-		Reports.logger.warning("No matching element found for: " + textToMatch);
-		throw new RuntimeException("No matching element found for: " + textToMatch);
+	    for (WebElement element : elements) {
+	        String optionText = element.getText().trim().toLowerCase();
+	        String targetText = textToMatch.trim().toLowerCase();
+	        // 1. First try an exact match (e.g., "India" == "India")
+	        // 2. Fall back to startsWith (e.g., "India +91" starts with "India")
+	        if (optionText.equalsIgnoreCase(targetText) || optionText.startsWith(targetText)) {
+	            click(element);
+	            Reports.logger.pass("Selected: " + textToMatch);
+	            return;
+	        }
+	    }
+
+	    Reports.logger.warning("No matching element found for: " + textToMatch);
+	    throw new RuntimeException("No matching element found for: " + textToMatch);
 	}
 
 	// wait to load image in DOM
@@ -253,6 +274,7 @@ public class WebCommons {
 
 	// method to wait using explicit wait - wait for element
 	public void waitForElementToClickable(WebElement element, int seconds) {
+		scrollToElement(element);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
@@ -262,5 +284,56 @@ public class WebCommons {
 		waitForElementToClickable(element, seconds); // Automatically waits for visibility first!
 		click(element);
 	}
+
+	// Waits for a specific element to disappear from the screen (become invisible)
+	public void waitForElementToDisappear(WebElement element, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(timeout));
+		wait.until(org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOf(element));
+	}
+
+	// Waits for a JavaScript alert to pop up on the screen
+	public void waitForAlertToBePresent(int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+		wait.until(ExpectedConditions.alertIsPresent());
+	}
+
+	// Grabs the alert and reads the text inside it
+	public String getAlertText() {
+		Alert alert = driver.switchTo().alert();
+		return alert.getText();
+	}
+
+	// Grabs the alert and clicks the "OK" button
+	public void acceptAlert() {
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+	}
+
+	// Grabs the alert and clicks the "Cancel" / "Dismiss" button
+	public void dismissAlert() {
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
+	}
+
+	// Grabs a prompt alert, types text into it, and clicks "OK"
+	public void enterTextAndAcceptAlert(String text) {
+		Alert alert = driver.switchTo().alert();
+		alert.sendKeys(text);
+		alert.accept();
+	}
+
+	// Waits for a JavaScript alert to completely disappear from the screen
+	public void waitForAlertToDisappear(int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+
+		// Use ExpectedConditions.not() to say "Wait until the alert is NOT present"
+		wait.until(ExpectedConditions.not(ExpectedConditions.alertIsPresent()));
+	}
+	
+	// The safest way to wait for an element to completely disappear from the DOM
+		public void waitForNumberOfElementsToBeZero(By locator, int timeout) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+			wait.until(ExpectedConditions.numberOfElementsToBe(locator, 0));
+		}
 
 }

@@ -4,11 +4,10 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class RetryTest implements IRetryAnalyzer {
-
+	private final int maxRetry = 2;
+	private int count = 0;
 	@Override
 	public boolean retry(ITestResult result) {
-		int maxRetry = 2;
-		int count = 0;
 		if (!result.isSuccess()) { // if test failed then we would retry otherwise no retry needed
 			if (count < maxRetry) {
 				count++;

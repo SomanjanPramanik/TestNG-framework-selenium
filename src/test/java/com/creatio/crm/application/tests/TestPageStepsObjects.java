@@ -1,7 +1,10 @@
 package com.creatio.crm.application.tests;
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
 import com.creatio.crm.application.steps.CookieBotPageSteps;
 import com.creatio.crm.application.steps.CookiePageSteps;
@@ -16,6 +19,8 @@ import com.creatio.crm.application.steps.SalesExplorePageSteps;
 import com.creatio.crm.application.steps.ServiceExplorePageSteps;
 import com.creatio.crm.application.steps.SignUpPageSteps;
 import com.creatio.crm.framework.base.BasePage;
+import com.creatio.crm.framework.utilities.ExcelUtils;
+
 
 public class TestPageStepsObjects extends BasePage{
 	
@@ -47,6 +52,13 @@ public class TestPageStepsObjects extends BasePage{
         salesExplorePageSteps = new SalesExplorePageSteps(driver);
 		serviceExplorePageSteps = new ServiceExplorePageSteps(driver);
 		signUpPageSteps = new SignUpPageSteps(driver);
+	}
+	
+	@DataProvider(name="Excel_data")
+	public String[][] data(Method method){
+		String[][] data = ExcelUtils.excelReadData("Test Data1.xlsx", method.getName());
+		return data;
+		
 	}
 
 }

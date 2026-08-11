@@ -1,7 +1,5 @@
 package com.creatio.crm.framework.listeners;
 
-import java.io.IOException;
-
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -21,7 +19,6 @@ public class TestListener extends Reports implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		String testName = result.getMethod().getMethodName();
 		logger.pass("Test executed successfully for : " + testName);
-		stopPrinting();
 	}
 
 	// method inform test has failed
@@ -32,10 +29,15 @@ public class TestListener extends Reports implements ITestListener {
 		// Add screenshot of it
 		String ssFileName = testName + ".png";
 		try {
-			logger.addScreenCaptureFromPath(
-					new WebCommons().takeWindowScreenshot(new BasePage().getDriver(), ssFileName));
-		} catch (IOException e) {
+			if (new BasePage().getDriver()!= null) {
+				logger.addScreenCaptureFromPath(
+						new WebCommons().takeWindowScreenshot(new BasePage().getDriver(), ssFileName));
+			}else {
+	            logger.warning("Could not take screenshot: WebDriver was null (Test likely crashed before browser launched).");
+	        }
+		} catch (Exception e) {
 			e.printStackTrace();
+			logger.warning("Failed to attach screenshot due to: " + e.getMessage());
 		}
 	}
 }

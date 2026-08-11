@@ -1,5 +1,6 @@
 package com.creatio.crm.framework.reports;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
@@ -26,6 +27,7 @@ public class Reports {
 	}
 
 	// method to Stop printing
+	@AfterSuite
 	public static void stopPrinting() {
 		extent.flush();
 	}

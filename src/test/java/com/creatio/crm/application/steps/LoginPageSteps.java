@@ -10,79 +10,85 @@ import com.creatio.crm.framework.web.commons.WebCommons;
 
 public class LoginPageSteps extends LoginPageElements {
 
-	// Accesing all selenium methods
 	WebCommons selenium = new WebCommons();
 
-	// PageFactory to connect elements with driver
 	public LoginPageSteps(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
-	// launch the app and verify
+	// Open the login application URL
 	public void launchTheApp() {
 		selenium.launchTheApplication();
-		selenium.waitForElementToBeVisible(logo, 30);
-		Assert.assertEquals(selenium.getTitle(), selenium.prop.getProperty("title"));
-		Reports.printInReport("pass", "Application launched succesfully");
+		Reports.printInReport("info", "Launched application URL");
 	}
 
-	// Verify login header
+	// Check if the application logo is displayed on the page
+	public void verifyLogoIsVisible() {
+		selenium.waitForElementToBeVisible(logo, 30);
+		Reports.printInReport("pass", "Login page logo is visible");
+	}
+
+	// Verify the browser tab title matches the expected value
+	public void verifyPageTitle() {
+		Assert.assertEquals(selenium.getTitle(), selenium.prop.getProperty("title"));
+		Reports.printInReport("pass", "Login page title matches expected");
+	}
+
+	// Verify the header title text on the login page
 	public void verifyLoginHeader() {
 		selenium.waitForElementToBeVisible(pageTitle, 10);
 		Assert.assertEquals(selenium.getElementText(pageTitle), selenium.prop.getProperty("Login_page_header"));
-		Reports.printInReport("pass", "Login page Header Loaded as expected");
+		Reports.printInReport("pass", "Login page header text is correct");
 	}
 
-	// Verify help text
+	// Verify the description or help text under the login header
 	public void verifyHelpText() {
 		selenium.waitForElementToBeVisible(helpText, 10);
 		Assert.assertEquals(selenium.getElementText(helpText), selenium.prop.getProperty("Login_page_help_text"));
-		Reports.printInReport("pass", "Login page help text Loaded as expected");
+		Reports.printInReport("pass", "Login page help text is correct");
 	}
 
-	// Enter credential
-	public void enterCredential() {
+	// Enter the passed username parameter into the email field
+	public void enterEmail(String email) {
 		selenium.waitForElementToClickable(emailField, 10);
-		selenium.enterText(emailField, selenium.prop.getProperty("username"));
+		selenium.enterText(emailField, email);
+		Reports.printInReport("info", "Entered email: " + email);
+	}
+
+	// Enter the passed password parameter into the password field
+	public void enterPassword(String password) {
 		selenium.waitForElementToClickable(passwordField, 10);
-		selenium.enterText(passwordField, selenium.prop.getProperty("password"));
-		Reports.printInReport("info", "Credential enterd as expected");
+		selenium.enterText(passwordField, password);
+		Reports.printInReport("info", "Entered password");
 	}
 
-	// Error message pop up after entering invalid credential
-	public void showErrorMessage() {
-		selenium.waitForElementToBeVisible(forgotPasswordMessage, 10);
-		Reports.printInReport("info", "Error message shown as : " + selenium.getElementText(forgotPasswordMessage));
-	}
-	
-	// Error message pop up after entering invalid credential in login
-	public void verifyInvalidLoginError() {
-	    selenium.waitForElementToBeVisible(errorMessage, 10);
-	    Reports.printInReport("info", "Error message shown as : " + selenium.getElementText(errorMessage));
+	// Click the login button to submit credentials
+	public void clickLoginButton() {
+		selenium.waitAndClick(loginButton, 10);
+		Reports.printInReport("info", "Clicked login button");
 	}
 
-	// verify forgot password link there visible and clickable
-	public void verifyForgotpasswordAfterError() {
-		selenium.waitAndClick(forgotPasswordAfterError, 10);
-		Reports.printInReport("info", "forgot password is there as expected and clicked");
+	// Click the link to navigate to the sign-up page
+	public void clickCreateNewAccountLink() {
+		selenium.waitAndClick(createNewAccount, 10);
+		Reports.printInReport("info", "Clicked create new account link");
 	}
 
-	// verify forgot password visibile and clickable
+	// Click the initial forgot password link
 	public void verifyForgotpassword() {
 		selenium.waitAndClick(forgotPasswordInitial, 10);
-		Reports.printInReport("info", "forgot password is there as expected and clicked");
+		Reports.printInReport("info", "Clicked forgot password link");
 	}
 
-	// click login button
-	public void clickLogin() {
-		selenium.waitAndClick(loginButton, 10);
-		Reports.printInReport("info", "Login button is clicked");
+	// Click the forgot password link appearing after an error
+	public void verifyForgotpasswordAfterError() {
+		selenium.waitAndClick(forgotPasswordAfterError, 10);
+		Reports.printInReport("info", "Clicked forgot password after error link");
 	}
 
-	// click create new Account link
-	public void clickSignin() {
-		selenium.waitAndClick(createNewAccount, 10);
-		Reports.printInReport("info", "Create new account link is clicked");
+	// Verify that an error message is shown for invalid login attempts
+	public void verifyInvalidLoginError() {
+		selenium.waitForElementToBeVisible(errorMessage, 10);
+		Reports.printInReport("info", "Error message displayed: " + selenium.getElementText(errorMessage));
 	}
-
 }

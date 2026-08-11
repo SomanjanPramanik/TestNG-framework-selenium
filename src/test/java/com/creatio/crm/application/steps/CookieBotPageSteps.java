@@ -16,13 +16,12 @@ public class CookieBotPageSteps extends CookieBotPageElement {
 		PageFactory.initElements(driver, this);
 	}
 
-	// Switches to the newly opened Cookiebot tab and verifies it loaded successfully
+	// Verify cookiebot external page loaded
 	public void verifyCookiebotPageLoaded() {
 		selenium.autoSwitchTab();
 		selenium.waitForElementToBeVisible(headerText, 10);
 
-		boolean isLoaded = selenium.isElementDisplayed(headerText);
-		Assert.assertTrue(isLoaded, "CRITICAL FAILURE: Cookiebot info page did not load — 'Powered by Cookiebot' link is broken");
-		Reports.printInReport("pass", "Cookiebot info page loaded successfully — 'Powered by Cookiebot' link works. Header text: " + selenium.getElementText(headerText));
+		Assert.assertTrue(selenium.isElementDisplayed(headerText), "CRITICAL FAILURE: Cookiebot info page did not load");
+		Reports.printInReport("pass", "Cookiebot info page loaded successfully. Header text: " + selenium.getElementText(headerText));
 	}
 }

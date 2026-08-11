@@ -15,6 +15,7 @@ public class PasswordRecoveryPageSteps extends PasswordRecoveryPageElement {
 		PageFactory.initElements(driver, this);
 	}
 
+	// Verify password recovery page loaded
 	public void verifyPageLoaded() {
 		selenium.waitForElementToBeVisible(header, 10);
 		boolean isLoaded = selenium.isElementDisplayed(header);
@@ -22,6 +23,7 @@ public class PasswordRecoveryPageSteps extends PasswordRecoveryPageElement {
 				"Password Recovery page loaded: " + isLoaded + ". Header: " + selenium.getElementText(header));
 	}
 
+	// Verify logo on recovery page
 	public void verifyLogo() {
 		selenium.waitForElementToBeVisible(logo, 10);
 		Reports.printInReport("pass", "Password Recovery page logo is visible");

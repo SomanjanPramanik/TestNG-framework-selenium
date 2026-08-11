@@ -1,130 +1,88 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com</groupId>
-	<artifactId>CreatioCRM</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-
-	<!--Dependencies-->
-	<dependencies>
-		<!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
-		<!--TestNG : Assertions Classes and it's methods-->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>7.11.0</version>
-			<!--<scope>test</scope>-->  <!--This means only available during testing — not in the main code-->
-		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<!--(selenium for web automation)-->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.43.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- Source: https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<!--(commons-io for file operations)-->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.21.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<!--(postgresql Jdbc to get data from database)-->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.7.8</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- Source: https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<!--(poi To read excel file)-->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>5.4.1</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<!-- Source:
-		https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-->
-		<!--(poi-ooxml To read excel file)-->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>5.4.1</version>
-			<scope>compile</scope>
-		</dependency>
-
-		<!-- Source: https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
-		<!--(pdfbox To read pdf file)-->
-		<dependency>
-			<groupId>org.apache.pdfbox</groupId>
-			<artifactId>pdfbox</artifactId>
-			<version>3.0.5</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<!--extends reports-->
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.1.2</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- Source:
-		https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-		<!--Api testing-->
-		<dependency>
-			<groupId>io.rest-assured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>6.0.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com</groupId>
-			<artifactId>AutomationMavenProject</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
-	<!--Plug ins-->
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<!-- Source:
-					https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-					<!-- maven compiler plugin to specify java version-->
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.15.0</version>
-					<configuration>
-						<source>17</source>
-						<target>17</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<!-- Source:
-					https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-					<!-- maven surefire plugin to run specific file-->
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.5.5</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>exception.handling.ExceptionHandling</suiteXmlFile>
-						</suiteXmlFiles>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com</groupId>
+  <artifactId>CreatioCRM</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+      <maven.compiler.source>17</maven.compiler.source>
+      <maven.compiler.target>17</maven.compiler.target>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+      <!-- TestNG -->
+      <dependency>
+          <groupId>org.testng</groupId>
+          <artifactId>testng</artifactId>
+          <version>7.8.0</version>
+          <scope>test</scope>
+      </dependency>
+      <!-- Selenium Java -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>4.18.1</version>
+      </dependency>
+      <!-- ExtentReports -->
+      <dependency>
+          <groupId>com.aventstack</groupId>
+          <artifactId>extentreports</artifactId>
+          <version>5.1.1</version>
+      </dependency>
+      <!-- Apache POI for Excel Handling -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi</artifactId>
+          <version>5.2.5</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml</artifactId>
+          <version>5.2.5</version>
+      </dependency>
+      <!-- Apache PDFBox for PDF Handling -->
+      <dependency>
+          <groupId>org.apache.pdfbox</groupId>
+          <artifactId>pdfbox</artifactId>
+          <version>3.0.5</version>
+      </dependency>
+      <!-- Apache Commons IO (For File & Screenshot Management) -->
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.15.1</version>
+      </dependency>
+      <!-- PostgreSQL JDBC Connector -->
+      <dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+          <version>42.7.8</version>
+      </dependency>
+  </dependencies>
+  <build>
+      <pluginManagement>
+          <plugins>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.11.0</version>
+                  <configuration>
+                      <source>17</source>
+                      <target>17</target>
+                  </configuration>
+              </plugin>
+              <plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-surefire-plugin</artifactId>
+                  <version>3.2.5</version>
+                  <configuration>
+                      <suiteXmlFiles>
+                          <suiteXmlFile>${suiteFile}</suiteXmlFile> 
+                      </suiteXmlFiles>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </pluginManagement>
+  </build>
 </project>
