@@ -15,9 +15,9 @@
           <include name="stopPrinting"/>
           <include name="setupPrinting"/>
           <include name="setupBrowser"/>
-          <include name="verifyCookiePrivacyPolicyNavigation"/>
+          <include name="verifyApplicationLogin" invocation-numbers="0"/>
+          <include name="verifyApplicationSignUp" invocation-numbers="0"/>
           <include name="initDriver"/>
-          <include name="verifyCookieDialogContentAndTabs"/>
         </methods>
       </class> <!-- com.creatio.crm.application.tests.ApplicationTest -->
     </classes>

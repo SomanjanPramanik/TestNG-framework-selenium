@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 
+import com.creatio.crm.application.steps.CheckYourMailPageSteps;
 import com.creatio.crm.application.steps.CookieBotPageSteps;
 import com.creatio.crm.application.steps.CookiePageSteps;
 import com.creatio.crm.application.steps.ExplorePageSteps;
@@ -36,7 +37,7 @@ public class TestPageStepsObjects extends BasePage{
 	public SalesExplorePageSteps salesExplorePageSteps = null;
 	public ServiceExplorePageSteps serviceExplorePageSteps = null;
 	public SignUpPageSteps signUpPageSteps = null;
-    
+	public CheckYourMailPageSteps checkYourMailPageSteps = null;
 	@BeforeMethod(dependsOnMethods = {"setupBrowser"} )
 	public void initDriver () {
 		WebDriver driver = getDriver();
@@ -52,6 +53,7 @@ public class TestPageStepsObjects extends BasePage{
         salesExplorePageSteps = new SalesExplorePageSteps(driver);
 		serviceExplorePageSteps = new ServiceExplorePageSteps(driver);
 		signUpPageSteps = new SignUpPageSteps(driver);
+		checkYourMailPageSteps = new CheckYourMailPageSteps(driver);
 	}
 	
 	@DataProvider(name="Excel_data")

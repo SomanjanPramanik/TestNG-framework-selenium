@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com</groupId>
@@ -22,7 +22,7 @@
       <dependency>
           <groupId>org.seleniumhq.selenium</groupId>
           <artifactId>selenium-java</artifactId>
-          <version>4.18.1</version>
+          <version>4.43.0</version>
       </dependency>
       <!-- ExtentReports -->
       <dependency>
@@ -59,6 +59,20 @@
           <artifactId>postgresql</artifactId>
           <version>42.7.8</version>
       </dependency>
+      <!-- SLF4J no-op binding: silences "no logging implementation" warning -->
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-nop</artifactId>
+          <version>2.0.13</version>
+          <scope>test</scope>
+      </dependency>
+      <!-- Log4j2 core: silences "could not find a logging implementation" warning -->
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+          <version>2.24.1</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
   <build>
       <pluginManagement>
@@ -78,7 +92,7 @@
                   <version>3.2.5</version>
                   <configuration>
                       <suiteXmlFiles>
-                          <suiteXmlFile>${suiteFile}</suiteXmlFile> 
+                          <suiteXmlFile>${suiteFile}</suiteXmlFile>
                       </suiteXmlFiles>
                   </configuration>
               </plugin>

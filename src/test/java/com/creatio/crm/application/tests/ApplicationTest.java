@@ -65,40 +65,44 @@ public class ApplicationTest extends TestPageStepsObjects {
 
 	// Test 6: Verify End-to-End Sign Up flow using data provider and atomic steps
 	@Test(priority = 6, dependsOnMethods = {
-			"verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Application Sign Up")
+	        "verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Application Sign Up")
 	public void verifyApplicationSignUp(String user, String pass, String mail, String company, String country,
-			String city, String phone) {
-		// Launch application and handle cookie consent
-		loginPageSteps.launchTheApp();
-		cookiePageSteps.verifyCookieDialogTitle();
-		cookiePageSteps.clickAllowAllButton();
-		cookiePageSteps.verifyCookiePopupDisappeared();
+	        String city, String phone) {
+	    // Launch application and handle cookie consent
+	    loginPageSteps.launchTheApp();
+	    cookiePageSteps.verifyCookieDialogTitle();
+	    cookiePageSteps.clickAllowAllButton();
+	    cookiePageSteps.verifyCookiePopupDisappeared();
 
-		// Navigate from login to sign up page
-		loginPageSteps.clickCreateNewAccountLink();
-		signUpPageSteps.verifySignUpPageIsLaunched();
+	    // Navigate from login to sign up page
+	    loginPageSteps.clickCreateNewAccountLink();
+	    signUpPageSteps.verifySignUpPageIsLaunched();
 
-		// Fill out registration fields step-by-step
-		signUpPageSteps.enterName(user);
-		signUpPageSteps.enterEmail(mail);
-		signUpPageSteps.enterPassword(pass);
-		signUpPageSteps.enterCompany(company);
+	    // Fill out registration fields step-by-step
+	    signUpPageSteps.enterName(user);
+	    signUpPageSteps.enterEmail(mail);
+	    signUpPageSteps.enterPassword(pass);
+	    signUpPageSteps.enterCompany(company);
 
-		// Select country and location information
-		signUpPageSteps.clickCountryDropdown();
-		signUpPageSteps.enterCountrySearchText(country);
-		signUpPageSteps.selectCountryOption(country);
-		signUpPageSteps.enterCity(city);
+	    // Select country and location information
+	    signUpPageSteps.clickCountryDropdown();
+	    signUpPageSteps.enterCountrySearchText(country);
+	    signUpPageSteps.selectCountryOption(country);
+	    signUpPageSteps.enterCity(city);
 
-		// Enter phone country code and digits
-		signUpPageSteps.clickPhoneCountryDropdown();
-		signUpPageSteps.selectPhoneCountryOption(country);
-		signUpPageSteps.enterPhone(phone);
+	    // Enter phone country code and digits
+	    signUpPageSteps.clickPhoneCountryDropdown();
+	    signUpPageSteps.selectPhoneCountryOption(country);
+	    signUpPageSteps.enterPhone(phone);
 
-		// Verify policy text and submit the registration form
-		signUpPageSteps.verifyPrivacyPolicyText();
-		signUpPageSteps.verifyRegisterButtonEnabled();
-		signUpPageSteps.clickSubmitButton();
+	    // Verify policy text and submit the registration form
+	    signUpPageSteps.verifyPrivacyPolicyText();
+	    signUpPageSteps.verifyRegisterButtonEnabled();
+	    signUpPageSteps.clickSubmitButton();
+
+	    // Verify redirect to Check Your Email confirmation page
+	    checkYourMailPageSteps.verifyHeaderText();
+	    checkYourMailPageSteps.verifySubHeaderText();
 	}
 
 	@Test(priority = 7, dependsOnMethods = {

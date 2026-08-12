@@ -37,7 +37,7 @@ public class TestListener extends Reports implements ITestListener {
 	        }
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.warning("Failed to attach screenshot due to: " + e.getMessage());
+			logger.warning("Failed to attach screenshot due to: " + e.getLocalizedMessage());
 		}
 	}
 }
