@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-12T23:04:54 IST" name="Suite" finished-at="2026-08-12T23:07:04 IST" duration-ms="130295">
+  <suite started-at="2026-08-13T01:56:50 IST" name="Suite" finished-at="2026-08-13T01:58:48 IST" duration-ms="118024">
     <groups>
     </groups>
-    <test started-at="2026-08-12T23:04:54 IST" name="CreatioCRMChromeTestNGE2E" finished-at="2026-08-12T23:07:04 IST" duration-ms="130295">
+    <test started-at="2026-08-13T01:56:50 IST" name="CreatioCRMChromeTestNGE2E" finished-at="2026-08-13T01:58:48 IST" duration-ms="118024">
       <class name="com.creatio.crm.application.tests.ApplicationTest">
-        <test-method is-config="true" signature="setupPrinting(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:54 IST" name="setupPrinting" finished-at="2026-08-12T23:04:54 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="setupPrinting(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:50 IST" name="setupPrinting" finished-at="2026-08-13T01:56:50 IST" duration-ms="217" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPrinting -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:54 IST" name="setupBrowser" finished-at="2026-08-12T23:04:56 IST" duration-ms="1441" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:50 IST" name="setupBrowser" finished-at="2026-08-13T01:56:51 IST" duration-ms="1359" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,19 +29,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:56 IST" name="initDriver" finished-at="2026-08-12T23:04:56 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="53" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:51 IST" name="initDriver" finished-at="2026-08-13T01:56:51 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="42" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyLoginPageUI()[pri:1, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:56 IST" name="verifyLoginPageUI" description="Verify Login page default UI elements and headers" finished-at="2026-08-12T23:04:58 IST" duration-ms="2628" status="PASS">
+        <test-method signature="verifyLoginPageUI()[pri:1, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:51 IST" name="verifyLoginPageUI" description="Verify Login page default UI elements and headers" finished-at="2026-08-13T01:56:54 IST" duration-ms="2601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageUI -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:58 IST" name="teardownBrowser" finished-at="2026-08-12T23:04:58 IST" duration-ms="238" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:54 IST" name="teardownBrowser" finished-at="2026-08-13T01:56:54 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:58 IST" name="setupBrowser" finished-at="2026-08-12T23:04:59 IST" duration-ms="999" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:54 IST" name="setupBrowser" finished-at="2026-08-13T01:56:55 IST" duration-ms="979" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,19 +52,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:59 IST" name="initDriver" finished-at="2026-08-12T23:04:59 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:55 IST" name="initDriver" finished-at="2026-08-13T01:56:55 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookieDialogContentAndTabs()[pri:2, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:04:59 IST" name="verifyCookieDialogContentAndTabs" description="Verify Cookie dialog content, details, and tabs" finished-at="2026-08-12T23:05:03 IST" duration-ms="3193" status="PASS">
+        <test-method signature="verifyCookieDialogContentAndTabs()[pri:2, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:55 IST" name="verifyCookieDialogContentAndTabs" description="Verify Cookie dialog content, details, and tabs" finished-at="2026-08-13T01:56:58 IST" duration-ms="2498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookieDialogContentAndTabs -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:03 IST" name="teardownBrowser" finished-at="2026-08-12T23:05:03 IST" duration-ms="224" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:58 IST" name="teardownBrowser" finished-at="2026-08-13T01:56:58 IST" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:03 IST" name="setupBrowser" finished-at="2026-08-12T23:05:04 IST" duration-ms="971" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:58 IST" name="setupBrowser" finished-at="2026-08-13T01:56:59 IST" duration-ms="892" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,19 +75,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:04 IST" name="initDriver" finished-at="2026-08-12T23:05:04 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:59 IST" name="initDriver" finished-at="2026-08-13T01:56:59 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookiePopUpAndPrivacyPolicyNavigation()[pri:3, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:04 IST" name="verifyCookiePopUpAndPrivacyPolicyNavigation" description="Verify Privacy Policy navigation from Cookie dialog" finished-at="2026-08-12T23:05:13 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI, com.creatio.crm.application.tests.ApplicationTest.verifyCookieDialogContentAndTabs" duration-ms="9581" status="PASS">
+        <test-method signature="verifyCookiePopUpAndPrivacyPolicyNavigation()[pri:3, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:59 IST" name="verifyCookiePopUpAndPrivacyPolicyNavigation" description="Verify Privacy Policy navigation from Cookie dialog" finished-at="2026-08-13T01:57:07 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI, com.creatio.crm.application.tests.ApplicationTest.verifyCookieDialogContentAndTabs" duration-ms="7866" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookiePopUpAndPrivacyPolicyNavigation -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:13 IST" name="teardownBrowser" finished-at="2026-08-12T23:05:14 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:07 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:07 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:14 IST" name="setupBrowser" finished-at="2026-08-12T23:05:15 IST" duration-ms="929" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:07 IST" name="setupBrowser" finished-at="2026-08-13T01:57:08 IST" duration-ms="840" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,19 +98,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:15 IST" name="initDriver" finished-at="2026-08-12T23:05:15 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:08 IST" name="initDriver" finished-at="2026-08-13T01:57:08 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyPasswordRecoveryNavigation()[pri:4, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:15 IST" name="verifyPasswordRecoveryNavigation" description="Verify Password Recovery page functionality" finished-at="2026-08-12T23:05:17 IST" duration-ms="2539" status="PASS">
+        <test-method signature="verifyPasswordRecoveryNavigation()[pri:4, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:08 IST" name="verifyPasswordRecoveryNavigation" description="Verify Password Recovery page functionality" finished-at="2026-08-13T01:57:11 IST" duration-ms="2913" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordRecoveryNavigation -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:17 IST" name="teardownBrowser" finished-at="2026-08-12T23:05:17 IST" duration-ms="215" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:11 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:11 IST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:17 IST" name="setupBrowser" finished-at="2026-08-12T23:05:18 IST" duration-ms="959" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:11 IST" name="setupBrowser" finished-at="2026-08-13T01:57:12 IST" duration-ms="880" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,19 +121,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:18 IST" name="initDriver" finished-at="2026-08-12T23:05:18 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:12 IST" name="initDriver" finished-at="2026-08-13T01:57:12 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookiesPopupDismissWhenUserAcceptCookies()[pri:5, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:18 IST" name="verifyCookiesPopupDismissWhenUserAcceptCookies" description="Verify Cookie pop-up disappears upon accepting cookies" finished-at="2026-08-12T23:05:21 IST" duration-ms="2412" status="PASS">
+        <test-method signature="verifyCookiesPopupDismissWhenUserAcceptCookies()[pri:5, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:12 IST" name="verifyCookiesPopupDismissWhenUserAcceptCookies" description="Verify Cookie pop-up disappears upon accepting cookies" finished-at="2026-08-13T01:57:15 IST" duration-ms="3277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookiesPopupDismissWhenUserAcceptCookies -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:21 IST" name="teardownBrowser" finished-at="2026-08-12T23:05:21 IST" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:15 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:15 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:22 IST" name="setupBrowser" finished-at="2026-08-12T23:05:22 IST" duration-ms="859" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:16 IST" name="setupBrowser" finished-at="2026-08-13T01:57:17 IST" duration-ms="867" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -144,11 +144,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:22 IST" name="initDriver" finished-at="2026-08-12T23:05:22 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:17 IST" name="initDriver" finished-at="2026-08-13T01:57:17 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyApplicationSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:22 IST" name="verifyApplicationSignUp" description="Verify Application Sign Up" data-provider="Excel_data" finished-at="2026-08-12T23:05:50 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="27118" status="PASS">
+        <test-method signature="verifyApplicationSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:17 IST" name="verifyApplicationSignUp" description="Verify Application Sign Up" data-provider="Excel_data" finished-at="2026-08-13T01:57:44 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="27061" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -189,11 +189,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyApplicationSignUp -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:50 IST" name="teardownBrowser" finished-at="2026-08-12T23:05:50 IST" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:44 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:44 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:50 IST" name="setupBrowser" finished-at="2026-08-12T23:05:51 IST" duration-ms="989" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:44 IST" name="setupBrowser" finished-at="2026-08-13T01:57:45 IST" duration-ms="907" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -204,11 +204,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:51 IST" name="initDriver" finished-at="2026-08-12T23:05:51 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:45 IST" name="initDriver" finished-at="2026-08-13T01:57:45 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:05:51 IST" name="verifyApplicationLogin" description="Verify Application Login " data-provider="Excel_data" finished-at="2026-08-12T23:06:55 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="64008" status="PASS">
+        <test-method signature="verifySuccessulApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:45 IST" name="verifySuccessulApplicationLogin" description="Verify Successful Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:35 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="50126" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,12 +223,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:06:55 IST" name="teardownBrowser" finished-at="2026-08-12T23:06:55 IST" duration-ms="276" status="PASS">
+        </test-method> <!-- verifySuccessulApplicationLogin -->
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:35 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:35 IST" duration-ms="288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:06:55 IST" name="setupBrowser" finished-at="2026-08-12T23:06:56 IST" duration-ms="915" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:35 IST" name="setupBrowser" finished-at="2026-08-13T01:58:36 IST" duration-ms="900" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,11 +239,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:06:56 IST" name="initDriver" finished-at="2026-08-12T23:06:56 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:36 IST" name="initDriver" finished-at="2026-08-13T01:58:36 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:06:56 IST" name="verifyApplicationLogin" description="Verify Application Login " data-provider="Excel_data" finished-at="2026-08-12T23:07:00 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="3534" status="PASS">
+        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:36 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:41 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="4948" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -258,12 +258,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:00 IST" name="teardownBrowser" finished-at="2026-08-12T23:07:00 IST" duration-ms="212" status="PASS">
+        </test-method> <!-- verifyInvalidApplicationLogin -->
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:41 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:41 IST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:00 IST" name="setupBrowser" finished-at="2026-08-12T23:07:01 IST" duration-ms="928" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:41 IST" name="setupBrowser" finished-at="2026-08-13T01:58:42 IST" duration-ms="860" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -274,11 +274,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:01 IST" name="initDriver" finished-at="2026-08-12T23:07:01 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:42 IST" name="initDriver" finished-at="2026-08-13T01:58:42 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:01 IST" name="verifyApplicationLogin" description="Verify Application Login " data-provider="Excel_data" finished-at="2026-08-12T23:07:04 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="3439" status="PASS">
+        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:42 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:48 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="5451" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -293,12 +293,12 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:04 IST" name="teardownBrowser" finished-at="2026-08-12T23:07:04 IST" duration-ms="220" status="PASS">
+        </test-method> <!-- verifyInvalidApplicationLogin -->
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:48 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:48 IST" duration-ms="188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="stopPrinting()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@5bf0d49]" started-at="2026-08-12T23:07:04 IST" name="stopPrinting" finished-at="2026-08-12T23:07:05 IST" duration-ms="239" status="PASS">
+        <test-method is-config="true" signature="stopPrinting()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:48 IST" name="stopPrinting" finished-at="2026-08-13T01:58:48 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopPrinting -->

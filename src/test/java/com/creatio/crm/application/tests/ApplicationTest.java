@@ -34,13 +34,13 @@ public class ApplicationTest extends TestPageStepsObjects {
 	public void verifyCookiePopUpAndPrivacyPolicyNavigation() {
 		// Launch application, open privacy policy from cookie pop-up, and return
 		loginPageSteps.launchTheApp();
-	    cookiePageSteps.verifyCookieDialogTitle();
-	    cookiePageSteps.clickShowDetailsLink(); 
-	    cookiePageSteps.clickAboutTab();        
-	    cookiePageSteps.clickPrivacyPolicyLink();
-	    privacyPolicyPageSteps.verifyPageLoaded();
-	    privacyPolicyPageSteps.verifyIntroText();
-	    cookiePageSteps.closePrivacyPolicyTab();
+		cookiePageSteps.verifyCookieDialogTitle();
+		cookiePageSteps.clickShowDetailsLink();
+		cookiePageSteps.clickAboutTab();
+		cookiePageSteps.clickPrivacyPolicyLink();
+		privacyPolicyPageSteps.verifyPageLoaded();
+		privacyPolicyPageSteps.verifyIntroText();
+		cookiePageSteps.closePrivacyPolicyTab();
 	}
 
 	// Test 4: Verify Password Recovery page navigation and elements
@@ -65,49 +65,65 @@ public class ApplicationTest extends TestPageStepsObjects {
 
 	// Test 6: Verify End-to-End Sign Up flow using data provider and atomic steps
 	@Test(priority = 6, dependsOnMethods = {
-	        "verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Application Sign Up")
+			"verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Application Sign Up")
 	public void verifyApplicationSignUp(String user, String pass, String mail, String company, String country,
-	        String city, String phone) {
-	    // Launch application and handle cookie consent
-	    loginPageSteps.launchTheApp();
-	    cookiePageSteps.verifyCookieDialogTitle();
-	    cookiePageSteps.clickAllowAllButton();
-	    cookiePageSteps.verifyCookiePopupDisappeared();
+			String city, String phone) {
+		// Launch application and handle cookie consent
+		loginPageSteps.launchTheApp();
+		cookiePageSteps.verifyCookieDialogTitle();
+		cookiePageSteps.clickAllowAllButton();
+		cookiePageSteps.verifyCookiePopupDisappeared();
 
-	    // Navigate from login to sign up page
-	    loginPageSteps.clickCreateNewAccountLink();
-	    signUpPageSteps.verifySignUpPageIsLaunched();
+		// Navigate from login to sign up page
+		loginPageSteps.clickCreateNewAccountLink();
+		signUpPageSteps.verifySignUpPageIsLaunched();
 
-	    // Fill out registration fields step-by-step
-	    signUpPageSteps.enterName(user);
-	    signUpPageSteps.enterEmail(mail);
-	    signUpPageSteps.enterPassword(pass);
-	    signUpPageSteps.enterCompany(company);
+		// Fill out registration fields step-by-step
+		signUpPageSteps.enterName(user);
+		signUpPageSteps.enterEmail(mail);
+		signUpPageSteps.enterPassword(pass);
+		signUpPageSteps.enterCompany(company);
 
-	    // Select country and location information
-	    signUpPageSteps.clickCountryDropdown();
-	    signUpPageSteps.enterCountrySearchText(country);
-	    signUpPageSteps.selectCountryOption(country);
-	    signUpPageSteps.enterCity(city);
+		// Select country and location information
+		signUpPageSteps.clickCountryDropdown();
+		signUpPageSteps.enterCountrySearchText(country);
+		signUpPageSteps.selectCountryOption(country);
+		signUpPageSteps.enterCity(city);
 
-	    // Enter phone country code and digits
-	    signUpPageSteps.clickPhoneCountryDropdown();
-	    signUpPageSteps.selectPhoneCountryOption(country);
-	    signUpPageSteps.enterPhone(phone);
+		// Enter phone country code and digits
+		signUpPageSteps.clickPhoneCountryDropdown();
+		signUpPageSteps.selectPhoneCountryOption(country);
+		signUpPageSteps.enterPhone(phone);
 
-	    // Verify policy text and submit the registration form
-	    signUpPageSteps.verifyPrivacyPolicyText();
-	    signUpPageSteps.verifyRegisterButtonEnabled();
-	    signUpPageSteps.clickSubmitButton();
+		// Verify policy text and submit the registration form
+		signUpPageSteps.verifyPrivacyPolicyText();
+		signUpPageSteps.verifyRegisterButtonEnabled();
+		signUpPageSteps.clickSubmitButton();
 
-	    // Verify redirect to Check Your Email confirmation page
-	    checkYourMailPageSteps.verifyHeaderText();
-	    checkYourMailPageSteps.verifySubHeaderText();
+		// Verify redirect to Check Your Email confirmation page
+		checkYourMailPageSteps.verifyHeaderText();
+		checkYourMailPageSteps.verifySubHeaderText();
 	}
 
 	@Test(priority = 7, dependsOnMethods = {
-			"verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Application Login ")
-	public void verifyApplicationLogin(String user, String pass) {
+			"verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Successful Application Login ")
+	public void verifySuccessulApplicationLogin(String user, String pass) {
+		loginPageSteps.launchTheApp();
+		cookiePageSteps.verifyCookieDialogTitle();
+		cookiePageSteps.clickAllowAllButton();
+		cookiePageSteps.verifyCookiePopupDisappeared();
+
+		loginPageSteps.verifyLoginHeader();
+		loginPageSteps.enterEmail(user);
+		loginPageSteps.enterPassword(pass);
+		loginPageSteps.clickLoginButton();
+		homePageSteps.verifyHomepageLoaded();
+
+	}
+
+	@Test(priority = 8, dependsOnMethods = {
+			"verifyLoginPageUI" }, dataProvider = "Excel_data", description = "Verify Invalid Application Login ")
+	public void verifyInvalidApplicationLogin(String user, String pass) {
 		loginPageSteps.launchTheApp();
 		cookiePageSteps.verifyCookieDialogTitle();
 		cookiePageSteps.clickAllowAllButton();
@@ -118,13 +134,11 @@ public class ApplicationTest extends TestPageStepsObjects {
 		loginPageSteps.enterPassword(pass);
 		loginPageSteps.clickLoginButton();
 
-		// If the Excel data is an invalid user, verify the error message
-		if (user.contains("Invalid")) {
-			loginPageSteps.verifyInvalidLoginError();
-		}
-		// If the Excel data is a valid user, verify the homepage loaded
-		else {
-			homePageSteps.verifyHomepageLoaded();
-		}
+		loginPageSteps.verifyInvalidLoginError();
+
+		loginPageSteps.verifyForgotpasswordAfterError();
+
+		passwordRecoveryPageSteps.verifyPageLoaded();
+		passwordRecoveryPageSteps.verifyLogo();
 	}
 }

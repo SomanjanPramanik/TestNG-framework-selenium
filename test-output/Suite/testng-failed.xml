@@ -15,8 +15,7 @@
           <include name="stopPrinting"/>
           <include name="setupPrinting"/>
           <include name="setupBrowser"/>
-          <include name="verifyApplicationLogin" invocation-numbers="0"/>
-          <include name="verifyApplicationSignUp" invocation-numbers="0"/>
+          <include name="verifySuccessulApplicationLogin" invocation-numbers="0"/>
           <include name="initDriver"/>
         </methods>
       </class> <!-- com.creatio.crm.application.tests.ApplicationTest -->
