@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods,   9 passed</span>
+                    <span class="method-stats">9 methods, 4 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90)">verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyCookiesPopupDismissWhenUserAcceptCookies">verifyCookiesPopupDismissWhenUserAcceptCookies</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)">verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)">verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +130,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90)">verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyCookieDialogContentAndTabs">verifyCookieDialogContentAndTabs</a> <!-- method navigator-link -->
@@ -118,17 +142,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyCookiesPopupDismissWhenUserAcceptCookies">verifyCookiesPopupDismissWhenUserAcceptCookies</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark)">verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)">verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,11 +153,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifyPasswordRecoveryNavigation">verifyPasswordRecoveryNavigation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.creatio.crm.application.tests.ApplicationTest" class="method navigator-link" hash-for-method="verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)">verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -158,9 +167,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.creatio.crm.application.tests.ApplicationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -170,10 +179,173 @@
                   </a> <!-- verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90) -->
                   <span class="method-name">verifyApplicationSignUp</span>
                   <span class="parameters">(Somanjan Pramanik,#Sp359stark,somanjan@gmail.com,sp369,India,Kolkata,90)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=151.0.7922.109)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b4d499c630e53978738f442499275a5, findElement {using=xpath, value=//div[@id=&apos;CybotCookiebotDialogBodyContentTitle&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52033}, goog:processID: 22800, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52033/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b4d499c630e53978738f442499275a5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1663)
+	at org.openqa.selenium.support.ui.ExpectedConditions$49.apply(ExpectedConditions.java:1651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$49.apply(ExpectedConditions.java:1647)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToDisappear(WebCommons.java:291)
+	at com.creatio.crm.application.steps.CookiePageSteps.verifyCookiePopupDisappeared(CookiePageSteps.java:55)
+	at com.creatio.crm.application.tests.ApplicationTest.verifyApplicationSignUp(ApplicationTest.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Verify Application Sign Up)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCookiesPopupDismissWhenUserAcceptCookies">
+                  </a> <!-- verifyCookiesPopupDismissWhenUserAcceptCookies -->
+                  <span class="method-name">verifyCookiesPopupDismissWhenUserAcceptCookies</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91be0c847d29ced0e159d41226062a38, get {url=https://profile.creatio.com/user/login?destination=corp/com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59196}, goog:processID: 11108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59196/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91be0c847d29ced0e159d41226062a38
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:429)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:220)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:374)
+	at com.creatio.crm.framework.web.commons.WebCommons.launchTheApplication(WebCommons.java:41)
+	at com.creatio.crm.application.steps.LoginPageSteps.launchTheApp(LoginPageSteps.java:21)
+	at com.creatio.crm.application.tests.ApplicationTest.verifyCookiesPopupDismissWhenUserAcceptCookies(ApplicationTest.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Cookie pop-up disappears upon accepting cookies)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)">
+                  </a> <!-- verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid) -->
+                  <span class="method-name">verifyInvalidApplicationLogin</span>
+                  <span class="parameters">(somanjan1606Invalid@gmail.com,#Sp369stark_Invalid)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [094c21c30b7c57aeca126e325ab90f1c, findElement {using=xpath, value=//div[@class=&apos;messages__content&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61177}, goog:processID: 9332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61177/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 094c21c30b7c57aeca126e325ab90f1c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4222)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:356)
+	at java.base/java.lang.String.valueOf(String.java:4222)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToBeVisible(WebCommons.java:153)
+	at com.creatio.crm.application.steps.LoginPageSteps.verifyInvalidLoginError(LoginPageSteps.java:91)
+	at com.creatio.crm.application.tests.ApplicationTest.verifyInvalidApplicationLogin(ApplicationTest.java:137)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Invalid Application Login )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)">
+                  </a> <!-- verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark) -->
+                  <span class="method-name">verifySuccessulApplicationLogin</span>
+                  <span class="parameters">(somanjan1606@gmail.com,Sp@369stark)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be813afe88ba08fd8c493f8a3f720004, findElement {using=xpath, value=//div[@id=&apos;CybotCookiebotDialogBodyContentTitle&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49161}, goog:processID: 10708, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49161/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be813afe88ba08fd8c493f8a3f720004
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4222)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:356)
+	at java.base/java.lang.String.valueOf(String.java:4222)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToBeVisible(WebCommons.java:153)
+	at com.creatio.crm.application.steps.CookiePageSteps.verifyCookieDialogTitle(CookiePageSteps.java:22)
+	at com.creatio.crm.application.tests.ApplicationTest.verifySuccessulApplicationLogin(ApplicationTest.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify Successful Application Login )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.creatio.crm.application.tests.ApplicationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="verifyCookieDialogContentAndTabs">
@@ -194,29 +366,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCookiesPopupDismissWhenUserAcceptCookies">
-                  </a> <!-- verifyCookiesPopupDismissWhenUserAcceptCookies -->
-                  <span class="method-name">verifyCookiesPopupDismissWhenUserAcceptCookies</span>
-                  <em>
-(Verify Cookie pop-up disappears upon accepting cookies)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark)">
                   </a> <!-- verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark) -->
                   <span class="method-name">verifyInvalidApplicationLogin</span>
                   <span class="parameters">(somanjan1606Invalid@gmail.com,#Sp369stark)</span>
-                  <em>
-(Verify Invalid Application Login )                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)">
-                  </a> <!-- verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid) -->
-                  <span class="method-name">verifyInvalidApplicationLogin</span>
-                  <span class="parameters">(somanjan1606Invalid@gmail.com,#Sp369stark_Invalid)</span>
                   <em>
 (Verify Invalid Application Login )                  </em>
                 </div> <!-- method-content -->
@@ -237,16 +390,6 @@
                   <span class="method-name">verifyPasswordRecoveryNavigation</span>
                   <em>
 (Verify Password Recovery page functionality)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)">
-                  </a> <!-- verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark) -->
-                  <span class="method-name">verifySuccessulApplicationLogin</span>
-                  <span class="parameters">(somanjan1606@gmail.com,Sp@369stark)</span>
-                  <em>
-(Verify Successful Application Login )                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -310,46 +453,46 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySuccessulApplicationLogin')
+data.setCell(0, 1, 'verifyCookiesPopupDismissWhenUserAcceptCookies')
 data.setCell(0, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(0, 3, 50126);
+data.setCell(0, 3, 180020);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyApplicationSignUp')
+data.setCell(1, 1, 'verifyInvalidApplicationLogin')
 data.setCell(1, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(1, 3, 27061);
+data.setCell(1, 3, 109263);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyCookiePopUpAndPrivacyPolicyNavigation')
+data.setCell(2, 1, 'verifySuccessulApplicationLogin')
 data.setCell(2, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(2, 3, 7866);
+data.setCell(2, 3, 11720);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyInvalidApplicationLogin')
+data.setCell(3, 1, 'verifyCookiePopUpAndPrivacyPolicyNavigation')
 data.setCell(3, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(3, 3, 5451);
+data.setCell(3, 3, 5859);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyInvalidApplicationLogin')
 data.setCell(4, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(4, 3, 4948);
+data.setCell(4, 3, 4544);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyCookiesPopupDismissWhenUserAcceptCookies')
+data.setCell(5, 1, 'verifyApplicationSignUp')
 data.setCell(5, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(5, 3, 3277);
+data.setCell(5, 3, 2578);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyPasswordRecoveryNavigation')
 data.setCell(6, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(6, 3, 2913);
+data.setCell(6, 3, 2087);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyLoginPageUI')
+data.setCell(7, 1, 'verifyCookieDialogContentAndTabs')
 data.setCell(7, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(7, 3, 2601);
+data.setCell(7, 3, 1968);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyCookieDialogContentAndTabs')
+data.setCell(8, 1, 'verifyLoginPageUI')
 data.setCell(8, 2, 'com.creatio.crm.application.tests.ApplicationTest')
-data.setCell(8, 3, 2498);
+data.setCell(8, 3, 1942);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -382,151 +525,159 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">241 ms</span>
+                <span class="method-start">287 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">1601 ms</span>
+                <span class="method-start">1761 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLoginPageUI</span>
-                <span class="method-start">1643 ms</span>
+                <span class="method-start">1800 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">4247 ms</span>
+                <span class="method-start">3744 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">4476 ms</span>
+                <span class="method-start">3990 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">5456 ms</span>
+                <span class="method-start">5027 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCookieDialogContentAndTabs</span>
-                <span class="method-start">5464 ms</span>
+                <span class="method-start">5035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">7963 ms</span>
+                <span class="method-start">7005 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">8161 ms</span>
+                <span class="method-start">7247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">9053 ms</span>
+                <span class="method-start">8232 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCookiePopUpAndPrivacyPolicyNavigation</span>
-                <span class="method-start">9059 ms</span>
+                <span class="method-start">8237 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">16926 ms</span>
+                <span class="method-start">14097 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">17178 ms</span>
+                <span class="method-start">14342 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">18018 ms</span>
+                <span class="method-start">15300 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPasswordRecoveryNavigation</span>
-                <span class="method-start">18022 ms</span>
+                <span class="method-start">15310 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">20936 ms</span>
+                <span class="method-start">17399 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">21140 ms</span>
+                <span class="method-start">17621 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">22020 ms</span>
+                <span class="method-start">18565 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyCookiesPopupDismissWhenUserAcceptCookies</span>
-                <span class="method-start">22025 ms</span>
+                <span class="method-start">18570 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">25304 ms</span>
+                <span class="method-start">246624 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">26115 ms</span>
+                <span class="method-start">247662 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">26982 ms</span>
+                <span class="method-start">248609 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyApplicationSignUp(Somanjan Pramanik, #Sp359stark, somanjan@gmail.com, sp369, India, Kolkata, 90)</span>
-                <span class="method-start">26987 ms</span>
+                <span class="method-start">248613 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">54049 ms</span>
+                <span class="method-start">251272 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">54336 ms</span>
+                <span class="method-start">251341 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">55243 ms</span>
+                <span class="method-start">252310 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifySuccessulApplicationLogin(somanjan1606@gmail.com, Sp@369stark)</span>
-                <span class="method-start">55248 ms</span>
+                <span class="method-start">252316 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">105375 ms</span>
+                <span class="method-start">264043 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">105698 ms</span>
+                <span class="method-start">264166 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">106599 ms</span>
+                <span class="method-start">265125 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark_Invalid)</span>
-                <span class="method-start">106603 ms</span>
+                <span class="method-start">265129 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">111552 ms</span>
+                <span class="method-start">374398 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setupBrowser(Chrome)</span>
-                <span class="method-start">111737 ms</span>
+                <span class="method-start">374575 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initDriver</span>
-                <span class="method-start">112597 ms</span>
+                <span class="method-start">375483 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInvalidApplicationLogin(somanjan1606Invalid@gmail.com, #Sp369stark)</span>
-                <span class="method-start">112602 ms</span>
+                <span class="method-start">375485 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardownBrowser</span>
-                <span class="method-start">118054 ms</span>
+                <span class="method-start">380031 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopPrinting</span>
-                <span class="method-start">118268 ms</span>
+                <span class="method-start">380251 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

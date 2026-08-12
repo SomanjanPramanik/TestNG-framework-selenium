@@ -10,11 +10,14 @@
     <classes>
       <class name="com.creatio.crm.application.tests.ApplicationTest">
         <methods>
+          <include name="verifyInvalidApplicationLogin" invocation-numbers="0"/>
           <include name="teardownBrowser"/>
           <include name="verifyLoginPageUI"/>
           <include name="stopPrinting"/>
           <include name="setupPrinting"/>
           <include name="setupBrowser"/>
+          <include name="verifyApplicationSignUp" invocation-numbers="0"/>
+          <include name="verifyCookiesPopupDismissWhenUserAcceptCookies"/>
           <include name="verifySuccessulApplicationLogin" invocation-numbers="0"/>
           <include name="initDriver"/>
         </methods>

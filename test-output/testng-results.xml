@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="5" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-13T01:56:50 IST" name="Suite" finished-at="2026-08-13T01:58:48 IST" duration-ms="118024">
+  <suite started-at="2026-08-13T03:58:33 IST" name="Suite" finished-at="2026-08-13T04:04:53 IST" duration-ms="379947">
     <groups>
     </groups>
-    <test started-at="2026-08-13T01:56:50 IST" name="CreatioCRMChromeTestNGE2E" finished-at="2026-08-13T01:58:48 IST" duration-ms="118024">
+    <test started-at="2026-08-13T03:58:33 IST" name="CreatioCRMChromeTestNGE2E" finished-at="2026-08-13T04:04:53 IST" duration-ms="379947">
       <class name="com.creatio.crm.application.tests.ApplicationTest">
-        <test-method is-config="true" signature="setupPrinting(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:50 IST" name="setupPrinting" finished-at="2026-08-13T01:56:50 IST" duration-ms="217" status="PASS">
+        <test-method is-config="true" signature="setupPrinting(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:32 IST" name="setupPrinting" finished-at="2026-08-13T03:58:33 IST" duration-ms="260" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupPrinting -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:50 IST" name="setupBrowser" finished-at="2026-08-13T01:56:51 IST" duration-ms="1359" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:33 IST" name="setupBrowser" finished-at="2026-08-13T03:58:34 IST" duration-ms="1474" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,19 +29,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:51 IST" name="initDriver" finished-at="2026-08-13T01:56:51 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="42" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:34 IST" name="initDriver" finished-at="2026-08-13T03:58:34 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyLoginPageUI()[pri:1, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:51 IST" name="verifyLoginPageUI" description="Verify Login page default UI elements and headers" finished-at="2026-08-13T01:56:54 IST" duration-ms="2601" status="PASS">
+        <test-method signature="verifyLoginPageUI()[pri:1, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:34 IST" name="verifyLoginPageUI" description="Verify Login page default UI elements and headers" finished-at="2026-08-13T03:58:36 IST" duration-ms="1942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageUI -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:54 IST" name="teardownBrowser" finished-at="2026-08-13T01:56:54 IST" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:36 IST" name="teardownBrowser" finished-at="2026-08-13T03:58:36 IST" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:54 IST" name="setupBrowser" finished-at="2026-08-13T01:56:55 IST" duration-ms="979" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:36 IST" name="setupBrowser" finished-at="2026-08-13T03:58:38 IST" duration-ms="1036" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -52,19 +52,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:55 IST" name="initDriver" finished-at="2026-08-13T01:56:55 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:38 IST" name="initDriver" finished-at="2026-08-13T03:58:38 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookieDialogContentAndTabs()[pri:2, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:55 IST" name="verifyCookieDialogContentAndTabs" description="Verify Cookie dialog content, details, and tabs" finished-at="2026-08-13T01:56:58 IST" duration-ms="2498" status="PASS">
+        <test-method signature="verifyCookieDialogContentAndTabs()[pri:2, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:38 IST" name="verifyCookieDialogContentAndTabs" description="Verify Cookie dialog content, details, and tabs" finished-at="2026-08-13T03:58:39 IST" duration-ms="1968" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookieDialogContentAndTabs -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:58 IST" name="teardownBrowser" finished-at="2026-08-13T01:56:58 IST" duration-ms="196" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:39 IST" name="teardownBrowser" finished-at="2026-08-13T03:58:40 IST" duration-ms="240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:58 IST" name="setupBrowser" finished-at="2026-08-13T01:56:59 IST" duration-ms="892" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:40 IST" name="setupBrowser" finished-at="2026-08-13T03:58:41 IST" duration-ms="985" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,19 +75,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:59 IST" name="initDriver" finished-at="2026-08-13T01:56:59 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:41 IST" name="initDriver" finished-at="2026-08-13T03:58:41 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookiePopUpAndPrivacyPolicyNavigation()[pri:3, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:56:59 IST" name="verifyCookiePopUpAndPrivacyPolicyNavigation" description="Verify Privacy Policy navigation from Cookie dialog" finished-at="2026-08-13T01:57:07 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI, com.creatio.crm.application.tests.ApplicationTest.verifyCookieDialogContentAndTabs" duration-ms="7866" status="PASS">
+        <test-method signature="verifyCookiePopUpAndPrivacyPolicyNavigation()[pri:3, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:41 IST" name="verifyCookiePopUpAndPrivacyPolicyNavigation" description="Verify Privacy Policy navigation from Cookie dialog" finished-at="2026-08-13T03:58:47 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI, com.creatio.crm.application.tests.ApplicationTest.verifyCookieDialogContentAndTabs" duration-ms="5859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookiePopUpAndPrivacyPolicyNavigation -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:07 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:07 IST" duration-ms="251" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:47 IST" name="teardownBrowser" finished-at="2026-08-13T03:58:47 IST" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:07 IST" name="setupBrowser" finished-at="2026-08-13T01:57:08 IST" duration-ms="840" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:47 IST" name="setupBrowser" finished-at="2026-08-13T03:58:48 IST" duration-ms="958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,19 +98,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:08 IST" name="initDriver" finished-at="2026-08-13T01:57:08 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:48 IST" name="initDriver" finished-at="2026-08-13T03:58:48 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyPasswordRecoveryNavigation()[pri:4, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:08 IST" name="verifyPasswordRecoveryNavigation" description="Verify Password Recovery page functionality" finished-at="2026-08-13T01:57:11 IST" duration-ms="2913" status="PASS">
+        <test-method signature="verifyPasswordRecoveryNavigation()[pri:4, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:48 IST" name="verifyPasswordRecoveryNavigation" description="Verify Password Recovery page functionality" finished-at="2026-08-13T03:58:50 IST" duration-ms="2087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPasswordRecoveryNavigation -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:11 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:11 IST" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:50 IST" name="teardownBrowser" finished-at="2026-08-13T03:58:50 IST" duration-ms="221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:11 IST" name="setupBrowser" finished-at="2026-08-13T01:57:12 IST" duration-ms="880" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:50 IST" name="setupBrowser" finished-at="2026-08-13T03:58:51 IST" duration-ms="944" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -121,19 +121,85 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:12 IST" name="initDriver" finished-at="2026-08-13T01:57:12 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:51 IST" name="initDriver" finished-at="2026-08-13T03:58:51 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyCookiesPopupDismissWhenUserAcceptCookies()[pri:5, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:12 IST" name="verifyCookiesPopupDismissWhenUserAcceptCookies" description="Verify Cookie pop-up disappears upon accepting cookies" finished-at="2026-08-13T01:57:15 IST" duration-ms="3277" status="PASS">
+        <test-method signature="verifyCookiesPopupDismissWhenUserAcceptCookies()[pri:5, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T03:58:51 IST" name="verifyCookiesPopupDismissWhenUserAcceptCookies" description="Verify Cookie pop-up disappears upon accepting cookies" finished-at="2026-08-13T04:01:51 IST" duration-ms="180020" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.util.concurrent.TimeoutException
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91be0c847d29ced0e159d41226062a38, get {url=https://profile.creatio.com/user/login?destination=corp/com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59196}, goog:processID: 11108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59196/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91be0c847d29ced0e159d41226062a38]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91be0c847d29ced0e159d41226062a38, get {url=https://profile.creatio.com/user/login?destination=corp/com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59196}, goog:processID: 11108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59196/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91be0c847d29ced0e159d41226062a38
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:429)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:220)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:374)
+at com.creatio.crm.framework.web.commons.WebCommons.launchTheApplication(WebCommons.java:41)
+at com.creatio.crm.application.steps.LoginPageSteps.launchTheApp(LoginPageSteps.java:21)
+at com.creatio.crm.application.tests.ApplicationTest.verifyCookiesPopupDismissWhenUserAcceptCookies(ApplicationTest.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCookiesPopupDismissWhenUserAcceptCookies -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:15 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:15 IST" duration-ms="251" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:39 IST" name="teardownBrowser" finished-at="2026-08-13T04:02:39 IST" duration-ms="303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:16 IST" name="setupBrowser" finished-at="2026-08-13T01:57:17 IST" duration-ms="867" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:40 IST" name="setupBrowser" finished-at="2026-08-13T04:02:41 IST" duration-ms="947" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -144,11 +210,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:17 IST" name="initDriver" finished-at="2026-08-13T01:57:17 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:41 IST" name="initDriver" finished-at="2026-08-13T04:02:41 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyApplicationSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:17 IST" name="verifyApplicationSignUp" description="Verify Application Sign Up" data-provider="Excel_data" finished-at="2026-08-13T01:57:44 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="27061" status="PASS">
+        <test-method signature="verifyApplicationSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:41 IST" name="verifyApplicationSignUp" description="Verify Application Sign Up" data-provider="Excel_data" finished-at="2026-08-13T04:02:44 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="2578" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -186,14 +252,88 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b4d499c630e53978738f442499275a5, findElement {using=xpath, value=//div[@id='CybotCookiebotDialogBodyContentTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52033}, goog:processID: 22800, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52033/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b4d499c630e53978738f442499275a5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5b4d499c630e53978738f442499275a5, findElement {using=xpath, value=//div[@id='CybotCookiebotDialogBodyContentTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52033}, goog:processID: 22800, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52033/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5b4d499c630e53978738f442499275a5
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1663)
+at org.openqa.selenium.support.ui.ExpectedConditions$49.apply(ExpectedConditions.java:1651)
+at org.openqa.selenium.support.ui.ExpectedConditions$49.apply(ExpectedConditions.java:1647)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToDisappear(WebCommons.java:291)
+at com.creatio.crm.application.steps.CookiePageSteps.verifyCookiePopupDisappeared(CookiePageSteps.java:55)
+at com.creatio.crm.application.tests.ApplicationTest.verifyApplicationSignUp(ApplicationTest.java:75)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyApplicationSignUp -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:44 IST" name="teardownBrowser" finished-at="2026-08-13T01:57:44 IST" duration-ms="251" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:44 IST" name="teardownBrowser" finished-at="2026-08-13T04:02:44 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:44 IST" name="setupBrowser" finished-at="2026-08-13T01:57:45 IST" duration-ms="907" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:44 IST" name="setupBrowser" finished-at="2026-08-13T04:02:45 IST" duration-ms="969" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -204,11 +344,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:45 IST" name="initDriver" finished-at="2026-08-13T01:57:45 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:45 IST" name="initDriver" finished-at="2026-08-13T04:02:45 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifySuccessulApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:57:45 IST" name="verifySuccessulApplicationLogin" description="Verify Successful Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:35 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="50126" status="PASS">
+        <test-method signature="verifySuccessulApplicationLogin(java.lang.String,java.lang.String)[pri:7, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:45 IST" name="verifySuccessulApplicationLogin" description="Verify Successful Application Login " data-provider="Excel_data" finished-at="2026-08-13T04:02:57 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="11720" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -221,14 +361,88 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be813afe88ba08fd8c493f8a3f720004, findElement {using=xpath, value=//div[@id='CybotCookiebotDialogBodyContentTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49161}, goog:processID: 10708, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49161/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be813afe88ba08fd8c493f8a3f720004]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be813afe88ba08fd8c493f8a3f720004, findElement {using=xpath, value=//div[@id='CybotCookiebotDialogBodyContentTitle']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49161}, goog:processID: 10708, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49161/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be813afe88ba08fd8c493f8a3f720004
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy18.toString(Unknown Source)
+at java.base/java.lang.String.valueOf(String.java:4222)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:356)
+at java.base/java.lang.String.valueOf(String.java:4222)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToBeVisible(WebCommons.java:153)
+at com.creatio.crm.application.steps.CookiePageSteps.verifyCookieDialogTitle(CookiePageSteps.java:22)
+at com.creatio.crm.application.tests.ApplicationTest.verifySuccessulApplicationLogin(ApplicationTest.java:112)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessulApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:35 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:35 IST" duration-ms="288" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:57 IST" name="teardownBrowser" finished-at="2026-08-13T04:02:57 IST" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:35 IST" name="setupBrowser" finished-at="2026-08-13T01:58:36 IST" duration-ms="900" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:57 IST" name="setupBrowser" finished-at="2026-08-13T04:02:58 IST" duration-ms="958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,11 +453,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:36 IST" name="initDriver" finished-at="2026-08-13T01:58:36 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:58 IST" name="initDriver" finished-at="2026-08-13T04:02:58 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:36 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:41 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="4948" status="PASS">
+        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:02:58 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T04:04:47 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="109263" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -256,14 +470,88 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [094c21c30b7c57aeca126e325ab90f1c, findElement {using=xpath, value=//div[@class='messages__content']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61177}, goog:processID: 9332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61177/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 094c21c30b7c57aeca126e325ab90f1c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=151.0.7922.109)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [094c21c30b7c57aeca126e325ab90f1c, findElement {using=xpath, value=//div[@class='messages__content']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.109, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\SOMANJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61177}, goog:processID: 9332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61177/devtoo..., se:cdpVersion: 151.0.7922.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 094c21c30b7c57aeca126e325ab90f1c
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy18.toString(Unknown Source)
+at java.base/java.lang.String.valueOf(String.java:4222)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:356)
+at java.base/java.lang.String.valueOf(String.java:4222)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.creatio.crm.framework.web.commons.WebCommons.waitForElementToBeVisible(WebCommons.java:153)
+at com.creatio.crm.application.steps.LoginPageSteps.verifyInvalidLoginError(LoginPageSteps.java:91)
+at com.creatio.crm.application.tests.ApplicationTest.verifyInvalidApplicationLogin(ApplicationTest.java:137)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:41 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:41 IST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:47 IST" name="teardownBrowser" finished-at="2026-08-13T04:04:47 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:41 IST" name="setupBrowser" finished-at="2026-08-13T01:58:42 IST" duration-ms="860" status="PASS">
+        <test-method is-config="true" signature="setupBrowser(java.lang.String)[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:47 IST" name="setupBrowser" finished-at="2026-08-13T04:04:48 IST" duration-ms="908" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -274,11 +562,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:42 IST" name="initDriver" finished-at="2026-08-13T01:58:42 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:48 IST" name="initDriver" finished-at="2026-08-13T04:04:48 IST" depends-on-methods="com.creatio.crm.framework.base.BasePage.setupBrowser" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:42 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T01:58:48 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="5451" status="PASS">
+        <test-method signature="verifyInvalidApplicationLogin(java.lang.String,java.lang.String)[pri:8, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:48 IST" name="verifyInvalidApplicationLogin" description="Verify Invalid Application Login " data-provider="Excel_data" finished-at="2026-08-13T04:04:53 IST" depends-on-methods="com.creatio.crm.application.tests.ApplicationTest.verifyLoginPageUI" duration-ms="4544" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -294,11 +582,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidApplicationLogin -->
-        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:48 IST" name="teardownBrowser" finished-at="2026-08-13T01:58:48 IST" duration-ms="188" status="PASS">
+        <test-method is-config="true" signature="teardownBrowser()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:53 IST" name="teardownBrowser" finished-at="2026-08-13T04:04:53 IST" duration-ms="177" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownBrowser -->
-        <test-method is-config="true" signature="stopPrinting()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T01:58:48 IST" name="stopPrinting" finished-at="2026-08-13T01:58:48 IST" duration-ms="283" status="PASS">
+        <test-method is-config="true" signature="stopPrinting()[pri:0, instance:com.creatio.crm.application.tests.ApplicationTest@1d296da]" started-at="2026-08-13T04:04:53 IST" name="stopPrinting" finished-at="2026-08-13T04:04:53 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopPrinting -->

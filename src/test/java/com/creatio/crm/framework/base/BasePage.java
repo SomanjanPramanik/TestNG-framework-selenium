@@ -15,38 +15,42 @@ public class BasePage extends Reports {
 
 	// This class will have all the common methods related to browser configurations
 
-	private static WebDriver driver = null;
-
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+    
 	// method to launch the browser based on browser name coming from runner file
 	@BeforeMethod(alwaysRun=true)
 	@Parameters(value = "browser")
 	public void setupBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
+			driver.set(new ChromeDriver());
 		} else if (browserName.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
+			driver.set(new EdgeDriver());
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
+			driver.set(new FirefoxDriver());
 		} else {
 			Assert.fail("Invalid browser input");
+			return;
 		}
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
+		driver.get().manage().window().maximize();
+		driver.get().manage().deleteAllCookies();
 	}
 	
 	// method to tear down the browser sessions
 	@AfterMethod(alwaysRun=true)
 	public void teardownBrowser() {
-		driver.quit();
+	    if (getDriver() != null) {
+	        getDriver().quit();
+	        driver.remove(); // Clears the ThreadLocal memory slot
+	    }
 	}
 
 	// method to share browser session (driver) with other classes
 	public WebDriver getDriver() {
-		return driver;		
+		return driver.get();		
 	}
 	
 	// method to update browser session
 	public void setDriver(WebDriver newDriver) {
-		driver = newDriver ;		
+		driver.set(newDriver) ;		
 	}
 }
