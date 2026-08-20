@@ -1,5 +1,8 @@
 package com.creatio.crm.framework.reports;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -7,7 +10,6 @@ import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.creatio.crm.framework.web.commons.WebCommons;
 
 public class Reports {
 	public static ExtentReports extent = null;
@@ -18,7 +20,7 @@ public class Reports {
 	@BeforeSuite
 	@Parameters(value = {"fileNameWithHtmlFormat"})
 	public static void setupPrinting(String fileNameWithHtmlFormat) {
-		String timestamp = new WebCommons().uniqueId("dd-MM-yyyy_HH-mm-ss");
+		String timestamp = uniqueId("dd-MM-yyyy_HH-mm-ss");
 	    String finalFileName = fileNameWithHtmlFormat.replace(".html", "") + "_" + timestamp + ".html";
 
 	    extent = new ExtentReports();
@@ -51,6 +53,12 @@ public class Reports {
 			logger.info(comment);
 		}
 		
+	}
+	
+	public static String uniqueId(String format) {
+		SimpleDateFormat sdf = new SimpleDateFormat(format);
+		String uniqueId = sdf.format(Calendar.getInstance().getTime());
+		return uniqueId;
 	}
 
 }

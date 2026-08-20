@@ -38,7 +38,10 @@ public class WebCommons {
 
 	// method to launch the application
 	public void launchTheApplication() {
-		driver.get(prop.getProperty("url"));
+		String url = prop.getProperty("url");
+		if(!url.isEmpty()) {
+		driver.get(url);
+		}
 	}
 
 	// method to scroll to element

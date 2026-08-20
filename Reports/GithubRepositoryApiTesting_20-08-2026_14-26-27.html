@@ -1,0 +1,1760 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Aug 20, 2026 02:26:27 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyNoRepositoryBeforeCreatingForAuthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:27 pm</span> / <span>00:00:02:789</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyNoRepositoryBeforeCreatingForAuthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:27 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:30 pm</span>
+<span class='badge badge-default'>00:00:02:789</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:27 pm</td>
+        <td>
+          Test has started for : verifyNoRepositoryBeforeCreatingForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:29 pm</td>
+        <td>
+          Status code matched , actual status code is : 404
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:29 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 404 Not Found
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:29 pm</td>
+        <td>
+          Response time , actual response time is : 1219
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:30 pm</td>
+        <td>
+          Response body matched , actual value is : Not Found for the key : message
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:30 pm</td>
+        <td>
+          Response body matched , actual value is : 404 for the key : status
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:30 pm</td>
+        <td>
+          Test executed successfully for : verifyNoRepositoryBeforeCreatingForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:30 pm</td>
+        <td>
+          Response Body :{
+    "message": "Not Found",
+    "documentation_url": "https://docs.github.com/rest/repos/repos#get-a-repository",
+    "status": "404"
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForCreatingRepositoryForAuthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:30 pm</span> / <span>00:00:02:891</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyForCreatingRepositoryForAuthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:30 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:33 pm</span>
+<span class='badge badge-default'>00:00:02:891</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:30 pm</td>
+        <td>
+          Test has started for : verifyForCreatingRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Status code matched , actual status code is : 201
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 201 Created
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response time , actual response time is : 2779
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response body matched , actual value is : SampleRepositryFromPostMan for the key : name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response body matched , actual value is : This is a sample repository from postman tool for the key : description
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369/SampleRepositryFromPostMan for the key : full_name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369 for the key : owner.login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response body matched , actual value is : false for the key : private
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Test executed successfully for : verifyForCreatingRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Response Body :{
+    "id": 1340490986,
+    "node_id": "R_kgDOT-ZE6g",
+    "name": "SampleRepositryFromPostMan",
+    "full_name": "newlord369/SampleRepositryFromPostMan",
+    "private": false,
+    "owner": {
+        "login": "newlord369",
+        "id": 316904902,
+        "node_id": "U_kgDOEuOVxg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/316904902?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/newlord369",
+        "html_url": "https://github.com/newlord369",
+        "followers_url": "https://api.github.com/users/newlord369/followers",
+        "following_url": "https://api.github.com/users/newlord369/following{/other_user}",
+        "gists_url": "https://api.github.com/users/newlord369/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/newlord369/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/newlord369/subscriptions",
+        "organizations_url": "https://api.github.com/users/newlord369/orgs",
+        "repos_url": "https://api.github.com/users/newlord369/repos",
+        "events_url": "https://api.github.com/users/newlord369/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/newlord369/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "description": "This is a sample repository from postman tool",
+    "fork": false,
+    "url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan",
+    "forks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/forks",
+    "keys_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/teams",
+    "hooks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/hooks",
+    "issue_events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/events",
+    "assignees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/tags",
+    "blobs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/languages",
+    "stargazers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/stargazers",
+    "contributors_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contributors",
+    "subscribers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscribers",
+    "subscription_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscription",
+    "commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/merges",
+    "archive_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/downloads",
+    "issues_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/labels{/name}",
+    "releases_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/deployments",
+    "created_at": "2026-08-20T08:56:30Z",
+    "updated_at": "2026-08-20T08:56:31Z",
+    "pushed_at": "2026-08-20T08:56:31Z",
+    "git_url": "git://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "ssh_url": "git@github.com:newlord369/SampleRepositryFromPostMan.git",
+    "clone_url": "https://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "svn_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+        
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+    },
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "network_count": 0,
+    "subscribers_count": 0
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForCreatingDuplicateRepositoryForAuthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:33 pm</span> / <span>00:00:00:766</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyForCreatingDuplicateRepositoryForAuthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:33 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:34 pm</span>
+<span class='badge badge-default'>00:00:00:766</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:33 pm</td>
+        <td>
+          Test has started for : verifyForCreatingDuplicateRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Status code matched , actual status code is : 422
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 422 Unprocessable Entity
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response time , actual response time is : 709
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response body matched , actual value is : Repository creation failed. for the key : message
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response body matched , actual value is : name already exists on this account for the key : errors[0].message
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Test executed successfully for : verifyForCreatingDuplicateRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response Body :{
+    "message": "Repository creation failed.",
+    "errors": [
+        {
+            "resource": "Repository",
+            "code": "custom",
+            "field": "name",
+            "message": "name already exists on this account"
+        }
+    ],
+    "documentation_url": "https://docs.github.com/rest/repos/repos#create-a-repository-for-the-authenticated-user",
+    "status": "422"
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyForCreatingRepositoryForUnauthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:34 pm</span> / <span>00:00:00:605</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyForCreatingRepositoryForUnauthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:34 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:34 pm</span>
+<span class='badge badge-default'>00:00:00:605</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Test has started for : verifyForCreatingRepositoryForUnauthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Status code matched , actual status code is : 401
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 401 Unauthorized
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response time , actual response time is : 570
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response body matched , actual value is : Requires authentication for the key : message
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Test executed successfully for : verifyForCreatingRepositoryForUnauthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Response Body :{
+    "message": "Requires authentication",
+    "documentation_url": "https://docs.github.com/rest",
+    "status": "401"
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyGettingRepositoryWhichExistsForAuthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:34 pm</span> / <span>00:00:00:698</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyGettingRepositoryWhichExistsForAuthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:34 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:35 pm</span>
+<span class='badge badge-default'>00:00:00:698</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:34 pm</td>
+        <td>
+          Test has started for : verifyGettingRepositoryWhichExistsForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Status code matched , actual status code is : 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response time , actual response time is : 625
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response body matched , actual value is : SampleRepositryFromPostMan for the key : name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response body matched , actual value is : This is a sample repository from postman tool for the key : description
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369/SampleRepositryFromPostMan for the key : full_name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369 for the key : owner.login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response body matched , actual value is : false for the key : private
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Test executed successfully for : verifyGettingRepositoryWhichExistsForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Response Body :{
+    "id": 1340490986,
+    "node_id": "R_kgDOT-ZE6g",
+    "name": "SampleRepositryFromPostMan",
+    "full_name": "newlord369/SampleRepositryFromPostMan",
+    "private": false,
+    "owner": {
+        "login": "newlord369",
+        "id": 316904902,
+        "node_id": "U_kgDOEuOVxg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/316904902?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/newlord369",
+        "html_url": "https://github.com/newlord369",
+        "followers_url": "https://api.github.com/users/newlord369/followers",
+        "following_url": "https://api.github.com/users/newlord369/following{/other_user}",
+        "gists_url": "https://api.github.com/users/newlord369/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/newlord369/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/newlord369/subscriptions",
+        "organizations_url": "https://api.github.com/users/newlord369/orgs",
+        "repos_url": "https://api.github.com/users/newlord369/repos",
+        "events_url": "https://api.github.com/users/newlord369/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/newlord369/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "description": "This is a sample repository from postman tool",
+    "fork": false,
+    "url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan",
+    "forks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/forks",
+    "keys_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/teams",
+    "hooks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/hooks",
+    "issue_events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/events",
+    "assignees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/tags",
+    "blobs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/languages",
+    "stargazers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/stargazers",
+    "contributors_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contributors",
+    "subscribers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscribers",
+    "subscription_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscription",
+    "commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/merges",
+    "archive_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/downloads",
+    "issues_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/labels{/name}",
+    "releases_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/deployments",
+    "created_at": "2026-08-20T08:56:30Z",
+    "updated_at": "2026-08-20T08:56:31Z",
+    "pushed_at": "2026-08-20T08:56:31Z",
+    "git_url": "git://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "ssh_url": "git@github.com:newlord369/SampleRepositryFromPostMan.git",
+    "clone_url": "https://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "svn_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+        
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+    },
+    "temp_clone_token": "",
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "security_and_analysis": {
+        "secret_scanning": {
+            "status": "enabled"
+        },
+        "secret_scanning_push_protection": {
+            "status": "enabled"
+        },
+        "dependabot_security_updates": {
+            "status": "disabled"
+        },
+        "secret_scanning_non_provider_patterns": {
+            "status": "disabled"
+        },
+        "secret_scanning_validity_checks": {
+            "status": "disabled"
+        }
+    },
+    "network_count": 0,
+    "subscribers_count": 0
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyUpdatingVisibilityToPublic</p>
+            <p class="text-sm">
+              <span>2:26:35 pm</span> / <span>00:00:00:646</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyUpdatingVisibilityToPublic</h5>
+<span class='badge badge-success'>08.20.2026 2:26:35 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:36 pm</span>
+<span class='badge badge-default'>00:00:00:646</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:35 pm</td>
+        <td>
+          Test has started for : verifyUpdatingVisibilityToPublic
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Status code matched , actual status code is : 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Response time , actual response time is : 614
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Response body matched , actual value is : false for the key : private
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Test executed successfully for : verifyUpdatingVisibilityToPublic
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Response Body :{
+    "id": 1340490986,
+    "node_id": "R_kgDOT-ZE6g",
+    "name": "SampleRepositryFromPostMan",
+    "full_name": "newlord369/SampleRepositryFromPostMan",
+    "private": false,
+    "owner": {
+        "login": "newlord369",
+        "id": 316904902,
+        "node_id": "U_kgDOEuOVxg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/316904902?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/newlord369",
+        "html_url": "https://github.com/newlord369",
+        "followers_url": "https://api.github.com/users/newlord369/followers",
+        "following_url": "https://api.github.com/users/newlord369/following{/other_user}",
+        "gists_url": "https://api.github.com/users/newlord369/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/newlord369/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/newlord369/subscriptions",
+        "organizations_url": "https://api.github.com/users/newlord369/orgs",
+        "repos_url": "https://api.github.com/users/newlord369/repos",
+        "events_url": "https://api.github.com/users/newlord369/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/newlord369/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "description": "This is a sample repository from postman tool",
+    "fork": false,
+    "url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan",
+    "forks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/forks",
+    "keys_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/teams",
+    "hooks_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/hooks",
+    "issue_events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/events",
+    "assignees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/tags",
+    "blobs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/languages",
+    "stargazers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/stargazers",
+    "contributors_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contributors",
+    "subscribers_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscribers",
+    "subscription_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/subscription",
+    "commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/merges",
+    "archive_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/downloads",
+    "issues_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/labels{/name}",
+    "releases_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/newlord369/SampleRepositryFromPostMan/deployments",
+    "created_at": "2026-08-20T08:56:30Z",
+    "updated_at": "2026-08-20T08:56:31Z",
+    "pushed_at": "2026-08-20T08:56:31Z",
+    "git_url": "git://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "ssh_url": "git@github.com:newlord369/SampleRepositryFromPostMan.git",
+    "clone_url": "https://github.com/newlord369/SampleRepositryFromPostMan.git",
+    "svn_url": "https://github.com/newlord369/SampleRepositryFromPostMan",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+        
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+    },
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "security_and_analysis": {
+        "secret_scanning": {
+            "status": "enabled"
+        },
+        "secret_scanning_push_protection": {
+            "status": "enabled"
+        },
+        "dependabot_security_updates": {
+            "status": "disabled"
+        },
+        "secret_scanning_non_provider_patterns": {
+            "status": "disabled"
+        },
+        "secret_scanning_validity_checks": {
+            "status": "disabled"
+        }
+    },
+    "network_count": 0,
+    "subscribers_count": 0
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyUpdatingNameAndDescription</p>
+            <p class="text-sm">
+              <span>2:26:36 pm</span> / <span>00:00:00:983</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyUpdatingNameAndDescription</h5>
+<span class='badge badge-success'>08.20.2026 2:26:36 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:37 pm</span>
+<span class='badge badge-default'>00:00:00:983</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:36 pm</td>
+        <td>
+          Test has started for : verifyUpdatingNameAndDescription
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Status code matched , actual status code is : 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response time , actual response time is : 952
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : NewSampleRepositryFromPostMan for the key : name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : This is your updated repository for the key : description
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Test executed successfully for : verifyUpdatingNameAndDescription
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response Body :{
+    "id": 1340490986,
+    "node_id": "R_kgDOT-ZE6g",
+    "name": "NewSampleRepositryFromPostMan",
+    "full_name": "newlord369/NewSampleRepositryFromPostMan",
+    "private": false,
+    "owner": {
+        "login": "newlord369",
+        "id": 316904902,
+        "node_id": "U_kgDOEuOVxg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/316904902?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/newlord369",
+        "html_url": "https://github.com/newlord369",
+        "followers_url": "https://api.github.com/users/newlord369/followers",
+        "following_url": "https://api.github.com/users/newlord369/following{/other_user}",
+        "gists_url": "https://api.github.com/users/newlord369/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/newlord369/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/newlord369/subscriptions",
+        "organizations_url": "https://api.github.com/users/newlord369/orgs",
+        "repos_url": "https://api.github.com/users/newlord369/repos",
+        "events_url": "https://api.github.com/users/newlord369/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/newlord369/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan",
+    "description": "This is your updated repository",
+    "fork": false,
+    "url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan",
+    "forks_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/forks",
+    "keys_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/teams",
+    "hooks_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/hooks",
+    "issue_events_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/events",
+    "assignees_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/tags",
+    "blobs_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/languages",
+    "stargazers_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/stargazers",
+    "contributors_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/contributors",
+    "subscribers_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/subscribers",
+    "subscription_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/subscription",
+    "commits_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/merges",
+    "archive_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/downloads",
+    "issues_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/labels{/name}",
+    "releases_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/deployments",
+    "created_at": "2026-08-20T08:56:30Z",
+    "updated_at": "2026-08-20T08:56:36Z",
+    "pushed_at": "2026-08-20T08:56:31Z",
+    "git_url": "git://github.com/newlord369/NewSampleRepositryFromPostMan.git",
+    "ssh_url": "git@github.com:newlord369/NewSampleRepositryFromPostMan.git",
+    "clone_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan.git",
+    "svn_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+        
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+    },
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "security_and_analysis": {
+        "secret_scanning": {
+            "status": "enabled"
+        },
+        "secret_scanning_push_protection": {
+            "status": "enabled"
+        },
+        "dependabot_security_updates": {
+            "status": "disabled"
+        },
+        "secret_scanning_non_provider_patterns": {
+            "status": "disabled"
+        },
+        "secret_scanning_validity_checks": {
+            "status": "disabled"
+        }
+    },
+    "network_count": 0,
+    "subscribers_count": 0
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyGettingRenamedRepository</p>
+            <p class="text-sm">
+              <span>2:26:37 pm</span> / <span>00:00:00:645</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyGettingRenamedRepository</h5>
+<span class='badge badge-success'>08.20.2026 2:26:37 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:37 pm</span>
+<span class='badge badge-default'>00:00:00:645</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Test has started for : verifyGettingRenamedRepository
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Status code matched , actual status code is : 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 200 OK
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response time , actual response time is : 585
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : NewSampleRepositryFromPostMan for the key : name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : This is your updated repository for the key : description
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369/NewSampleRepositryFromPostMan for the key : full_name
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : newlord369 for the key : owner.login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response body matched , actual value is : false for the key : private
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Test executed successfully for : verifyGettingRenamedRepository
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Response Body :{
+    "id": 1340490986,
+    "node_id": "R_kgDOT-ZE6g",
+    "name": "NewSampleRepositryFromPostMan",
+    "full_name": "newlord369/NewSampleRepositryFromPostMan",
+    "private": false,
+    "owner": {
+        "login": "newlord369",
+        "id": 316904902,
+        "node_id": "U_kgDOEuOVxg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/316904902?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/newlord369",
+        "html_url": "https://github.com/newlord369",
+        "followers_url": "https://api.github.com/users/newlord369/followers",
+        "following_url": "https://api.github.com/users/newlord369/following{/other_user}",
+        "gists_url": "https://api.github.com/users/newlord369/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/newlord369/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/newlord369/subscriptions",
+        "organizations_url": "https://api.github.com/users/newlord369/orgs",
+        "repos_url": "https://api.github.com/users/newlord369/repos",
+        "events_url": "https://api.github.com/users/newlord369/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/newlord369/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+    },
+    "html_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan",
+    "description": "This is your updated repository",
+    "fork": false,
+    "url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan",
+    "forks_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/forks",
+    "keys_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/teams",
+    "hooks_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/hooks",
+    "issue_events_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/events",
+    "assignees_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/tags",
+    "blobs_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/languages",
+    "stargazers_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/stargazers",
+    "contributors_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/contributors",
+    "subscribers_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/subscribers",
+    "subscription_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/subscription",
+    "commits_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/merges",
+    "archive_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/downloads",
+    "issues_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/labels{/name}",
+    "releases_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/newlord369/NewSampleRepositryFromPostMan/deployments",
+    "created_at": "2026-08-20T08:56:30Z",
+    "updated_at": "2026-08-20T08:56:36Z",
+    "pushed_at": "2026-08-20T08:56:31Z",
+    "git_url": "git://github.com/newlord369/NewSampleRepositryFromPostMan.git",
+    "ssh_url": "git@github.com:newlord369/NewSampleRepositryFromPostMan.git",
+    "clone_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan.git",
+    "svn_url": "https://github.com/newlord369/NewSampleRepositryFromPostMan",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": null,
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+        
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+    },
+    "temp_clone_token": "",
+    "allow_squash_merge": true,
+    "allow_merge_commit": true,
+    "allow_rebase_merge": true,
+    "allow_auto_merge": false,
+    "delete_branch_on_merge": false,
+    "allow_update_branch": false,
+    "use_squash_pr_title_as_default": false,
+    "squash_merge_commit_message": "COMMIT_MESSAGES",
+    "squash_merge_commit_title": "COMMIT_OR_PR_TITLE",
+    "merge_commit_message": "PR_TITLE",
+    "merge_commit_title": "MERGE_MESSAGE",
+    "security_and_analysis": {
+        "secret_scanning": {
+            "status": "enabled"
+        },
+        "secret_scanning_push_protection": {
+            "status": "enabled"
+        },
+        "dependabot_security_updates": {
+            "status": "disabled"
+        },
+        "secret_scanning_non_provider_patterns": {
+            "status": "disabled"
+        },
+        "secret_scanning_validity_checks": {
+            "status": "disabled"
+        }
+    },
+    "network_count": 0,
+    "subscribers_count": 0
+}
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">verifyDeletingRepositoryForAuthenticatedUser</p>
+            <p class="text-sm">
+              <span>2:26:37 pm</span> / <span>00:00:02:923</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">verifyDeletingRepositoryForAuthenticatedUser</h5>
+<span class='badge badge-success'>08.20.2026 2:26:37 pm</span>
+<span class='badge badge-danger'>08.20.2026 2:26:40 pm</span>
+<span class='badge badge-default'>00:00:02:923</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:26:37 pm</td>
+        <td>
+          Test has started for : verifyDeletingRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:40 pm</td>
+        <td>
+          Status code matched , actual status code is : 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:40 pm</td>
+        <td>
+          Status message matched , actual status message is : HTTP/1.1 204 No Content
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:40 pm</td>
+        <td>
+          Response time , actual response time is : 896
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:40 pm</td>
+        <td>
+          Test executed successfully for : verifyDeletingRepositoryForAuthenticatedUser
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:26:40 pm</td>
+        <td>
+          Response Body :
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Aug 20, 2026 02:26:27 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Aug 20, 2026 02:26:40 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>9</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>9</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='88%'><b>68</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>9</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"verifyNoRepositoryBeforeCreatingForAuthenticatedUser":2.789,"verifyForCreatingRepositoryForAuthenticatedUser":2.891,"verifyForCreatingDuplicateRepositoryForAuthenticatedUser":0.766,"verifyForCreatingRepositoryForUnauthenticatedUser":0.605,"verifyGettingRepositoryWhichExistsForAuthenticatedUser":0.698,"verifyUpdatingVisibilityToPublic":0.646,"verifyUpdatingNameAndDescription":0.983,"verifyGettingRenamedRepository":0.645,"verifyDeletingRepositoryForAuthenticatedUser":2.923
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 9,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 68,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 9
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

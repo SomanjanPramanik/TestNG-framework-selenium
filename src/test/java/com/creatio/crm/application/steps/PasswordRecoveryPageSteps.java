@@ -2,8 +2,6 @@ package com.creatio.crm.application.steps;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-
 import com.creatio.crm.application.elements.PasswordRecoveryPageElement;
 import com.creatio.crm.framework.reports.Reports;
 import com.creatio.crm.framework.web.commons.WebCommons;
@@ -18,11 +16,13 @@ public class PasswordRecoveryPageSteps extends PasswordRecoveryPageElement {
 
 	// Verify password recovery page loaded
 	public void verifyPageLoaded() {
-		selenium.waitForElementToBeVisible(header, 10);
-		boolean isLoaded = selenium.isElementDisplayed(header);
-		Assert.assertTrue(isLoaded);
-		Reports.printInReport(isLoaded ? "pass" : "fail",
-				"Password Recovery page loaded: " + isLoaded + ". Header: " + selenium.getElementText(header));
+	    try {
+	        selenium.waitForElementToBeVisible(header, 10);
+	        Reports.printInReport("pass", "Password Recovery page loaded");
+	    } catch (Exception e) {
+	        Reports.printInReport("fail", "Password Recovery page did not load");
+	        throw e;
+	    }
 	}
 
 	// Verify logo on recovery page

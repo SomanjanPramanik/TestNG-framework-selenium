@@ -16,7 +16,6 @@ public class PdfUtils {
 			data = text.getText(document);
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return data;
