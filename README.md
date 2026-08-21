@@ -115,15 +115,3 @@ Reports are generated per run in `Reports/*.html` (ExtentReports) and `test-outp
 - **UI (`ApplicationTest`)** — 8 scenarios: login page UI, cookie consent dialog + tabs, cookie-popup → privacy policy navigation, password recovery flow, cookie acceptance dismissal, data-driven sign-up, valid login, invalid login.
 - **API (`RepositoryApiTest`)** — 9 scenarios covering the full repository lifecycle: pre-condition check, create, verify creation, get, update, verify update, delete, verify deletion, and negative/error-path checks.
 
-## Design Talking Points (for interview)
-
-- **Why composition over inheritance for step objects** — avoids deep, fragile class hierarchies and mirrors the constraint Cucumber enforces on step definitions, so the pattern transfers directly to a BDD framework.
-- **Why ThreadLocal for the driver** — makes true parallel cross-browser execution safe without each thread stepping on another's session.
-- **Why a retry analyzer instead of just re-running failed suites manually** — cuts down noise from transient UI flakiness (network/animation timing) without masking genuine failures (capped at 2 retries).
-- **Why API + DB layers alongside UI** — UI-only automation can't catch backend data corruption; this framework can create data via API, verify it through the UI, and cross-check the database directly — a full-stack coverage story.
-
-## Possible Next Steps
-
-- Add GitHub Actions CI to run the API suite on every push (no browser dependency, fastest feedback loop).
-- Externalize the retry count and thread count into `config.properties`.
-- Add Allure or keep ExtentReports but publish it as a GitHub Pages artifact per CI run.
