@@ -1,1 +1,21 @@
+# Secrets / local config
 Config/config.properties
+
+# Build output
+target/
+
+# Test execution output
+test-output/
+Reports/
+Screenshots/
+
+# IDE
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
