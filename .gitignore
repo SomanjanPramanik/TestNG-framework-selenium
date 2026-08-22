@@ -15,6 +15,7 @@ Screenshots/
 .project
 .idea/
 *.iml
+bin/
 
 # OS
 .DS_Store
@@ -26,3 +27,17 @@ src/test/resources/apache-jmeter-5.6.3/JMeter Testing Script jmx file/*.jmx
 # JMeter generated results (regenerated per run, no need to version)
 src/test/resources/apache-jmeter-5.6.3/JMeter reports/Summary reports/*.csv
 src/test/resources/apache-jmeter-5.6.3/JMeter reports/JMeter html reports/*
+
+# Apache JMeter installation itself (bundled binaries/libs, not your code —
+# this is what caused the 72MB push; anyone running the framework needs
+# JMeter's jars pulled via Maven deps or a local install, not a committed copy)
+src/test/resources/apache-jmeter-5.6.3/bin/
+src/test/resources/apache-jmeter-5.6.3/lib/
+src/test/resources/apache-jmeter-5.6.3/docs/
+src/test/resources/apache-jmeter-5.6.3/licenses/
+src/test/resources/apache-jmeter-5.6.3/extras/
+src/test/resources/apache-jmeter-5.6.3/printable_docs/
+src/test/resources/apache-jmeter-5.6.3/backups/
+src/test/resources/apache-jmeter-5.6.3/LICENSE
+src/test/resources/apache-jmeter-5.6.3/NOTICE
+src/test/resources/apache-jmeter-5.6.3/README.md
