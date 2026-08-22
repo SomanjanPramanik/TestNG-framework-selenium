@@ -1,6 +1,6 @@
 # CreatioCRM Test Automation Framework
 
-A Java-based **UI + API test automation framework** built with **Selenium WebDriver, TestNG, and REST-assured**, targeting [Creatio CRM](https://www.creatio.com/) (web UI) and the GitHub REST API (API layer). Built to demonstrate a production-style Page Object Model, cross-browser + parallel execution, data-driven testing, custom reporting, and DB validation.
+A Java-based **UI + API + Performance test automation framework** built with **Selenium WebDriver, TestNG, REST-assured, and Apache JMeter**, targeting [Creatio CRM](https://www.creatio.com/) (web UI) and the GitHub REST API (API + performance layers). Built to demonstrate a production-style Page Object Model, cross-browser + parallel execution, data-driven testing, custom reporting, DB validation, and programmatic JMeter performance testing.
 
 ## Key Features
 
@@ -8,7 +8,8 @@ A Java-based **UI + API test automation framework** built with **Selenium WebDri
 - **Cross-browser execution** — Chrome, Firefox, and Edge via a factory-style `BasePage.setupBrowser()`, driven entirely by TestNG `<parameter>` values (no code changes to switch browsers).
 - **Thread-safe parallel execution** — `WebDriver` is held in a `ThreadLocal`, so the same `CreatioCRME2EParalleltestng.xml` suite can run Chrome/Firefox/Edge concurrently without session bleed.
 - **Data-driven testing** — Apache POI reads test data from Excel (`TestData/ExcelFiles/Test Data1.xlsx`) via a TestNG `@DataProvider`, keyed by test method name.
-- **API test layer** — REST-assured based `ApiCommons` wraps GET/POST/PUT/PATCH/DELETE with reusable status/body/header/response-time assertions; `RepositoryApiTest` runs a full CRUD lifecycle against the GitHub Repos API (create → verify → update → delete).
+- **API test layer** — REST-assured based `ApiCommons` wraps GET/POST/PUT/PATCH/DELETE with reusable status/body/header/response-time assertions; `FunctionalRepositoryApiTest` runs a full CRUD lifecycle against the GitHub Repos API (create → verify → update → delete).
+- **Performance test layer** — `JMeterCommons` drives Apache JMeter 5.6.3 programmatically via its Java API (no external JMeter install or CLI required): loads a `.jmx` test plan, executes it through `StandardJMeterEngine`, streams results to a timestamped CSV via `ResultCollector`, and generates a full HTML dashboard report (APDEX, throughput, response times, error breakdown) via `ReportGenerator`. Each run produces its own timestamped CSV + HTML report folder, so historical runs are never overwritten.
 - **DB validation layer** — JDBC/PostgreSQL utility (`DBUtils` + `DBreadData`) to query and validate backend data directly, not just through the UI.
 - **Custom ExtentReports integration** — `TestListener` (UI) and `ApiTestListener` (API) auto-capture screenshots on failure and attach API response bodies to the report; reports are timestamped per run.
 - **Retry-on-failure** — `RetryTest` (`IRetryAnalyzer`) retries a failed test up to 2 times before marking it a genuine failure, reducing flaky-test noise.
@@ -22,8 +23,9 @@ A Java-based **UI + API test automation framework** built with **Selenium WebDri
 | UI Automation | Selenium WebDriver 4.43 |
 | Test Runner | TestNG 7.8 |
 | API Testing | REST-assured 6.0, org.json |
+| Performance Testing | Apache JMeter 5.6.3 (Core, HTTP, Components — embedded via Java API) |
 | Data | Apache POI (Excel), Apache PDFBox, PostgreSQL JDBC |
-| Reporting | ExtentReports 5.1 (Spark reporter) |
+| Reporting | ExtentReports 5.1 (Spark reporter), JMeter HTML Dashboard |
 | Utilities | Apache Commons IO |
 
 ## Architecture
@@ -40,6 +42,12 @@ Steps (action methods, calls WebCommons)
 API Test (TestNG @Test)
    └── extends ApiCommons             (REST-assured request builder + assertions)
           └── extends Reports
+
+Performance Test (TestNG @Test)
+   └── calls JMeterCommons.runJMeterScript(jmxFile)
+          ├── StandardJMeterEngine    (executes the .jmx test plan)
+          ├── ResultCollector         (streams samples to a timestamped CSV)
+          └── ReportGenerator         (builds the HTML dashboard from the CSV)
 ```
 
 Composition over inheritance was a deliberate choice: Cucumber-style step definitions can't extend other step classes, and even in a plain TestNG framework, keeping `Elements` → `Steps` → composed-into-Test avoids a fragile inheritance chain and keeps each page object unit-testable in isolation.
@@ -56,19 +64,29 @@ src/test/java/com/creatio/crm/
 │       └── ApplicationTest.java        # UI test scenarios
 ├── api/
 │   ├── pages/RepositoryApiPage.java    # JSON request-body builders
-│   └── tests/RepositoryApiTest.java    # GitHub API CRUD test suite
+│   └── tests/
+│       ├── FunctionalRepositoryApiTest.java    # GitHub API CRUD test suite
+│       └── PerformanceRepositoryApiTest.java   # Triggers JMeter performance run
 └── framework/
     ├── base/BasePage.java              # browser setup/teardown (ThreadLocal WebDriver)
-    ├── web/commons/WebCommons.java     # reusable Selenium actions & waits
-    ├── api/commons/ApiCommons.java     # reusable REST-assured request/assert methods
+    ├── web/commons/WebCommons.java     # reusable Selenium actions & waits, uniqueId() timestamp helper
+    ├── api/commons/
+    │   ├── ApiCommons.java              # reusable REST-assured request/assert methods
+    │   └── JMeterCommons.java           # embedded JMeter engine runner + report generation
     ├── db/commons/DBreadData.java      # DB query → List<Map<String,String>>
     ├── utilities/                      # DBUtils, ExcelUtils, PdfUtils, PropUtils
     ├── listeners/                      # TestListener, ApiTestListener, RetryTest
     └── reports/Reports.java            # ExtentReports lifecycle
 
-TestRunner/           # TestNG suite XMLs (sequential, parallel, API)
+TestRunner/           # TestNG suite XMLs (sequential, parallel, API, performance)
 Config/                # config.properties (git-ignored, holds secrets/URLs)
 TestData/ExcelFiles/   # data-driven test inputs
+src/test/resources/apache-jmeter-5.6.3/
+├── JMeter Testing Script jmx file/   # .jmx test plans
+├── JMeter reports/
+│   ├── Summary reports/               # timestamped CSV results per run
+│   └── JMeter html reports/           # timestamped HTML dashboard folder per run
+└── bin/jmeter.properties              # JMeter engine configuration
 ```
 
 ## Setup
@@ -95,6 +113,8 @@ db_password=<password>
 
 3. `mvn clean install -DskipTests` to pull dependencies.
 
+> **Note (performance layer):** no separate JMeter installation is required — `ApacheJMeter_core`, `ApacheJMeter_http`, and `ApacheJMeter_components` are pulled in as Maven dependencies and driven entirely through JMeter's Java API (`JMeterCommons`). The `.jmx` test plan under `src/test/resources/apache-jmeter-5.6.3/JMeter Testing Script jmx file/` just needs to reference valid target endpoints (see `Config/config.properties`).
+
 ## Running Tests
 
 ```bash
@@ -104,14 +124,17 @@ mvn test -DsuiteFile=TestRunner/CreatioCRME2Etestng.xml
 # Parallel cross-browser UI suite (Chrome + Firefox + Edge, 5 threads each)
 mvn test -DsuiteFile=TestRunner/CreatioCRME2EParalleltestng.xml
 
-# GitHub REST API suite
-mvn test -DsuiteFile=TestRunner/GitHubRepositoryApiTesttestng.xml
+# GitHub REST API suite (functional)
+mvn test -DsuiteFile=TestRunner/FunctionalGitHubRepositoryApiTesttestng.xml
+
+# GitHub REST API suite (performance — runs JMeter test plan, generates CSV + HTML report)
+mvn test -DsuiteFile=TestRunner/PerformanceGitHubRepositoryApiTesttestng.xml
 ```
 
-Reports are generated per run in `Reports/*.html` (ExtentReports) and `test-output/` (native TestNG reports). Failure screenshots are saved to `Screenshots/`.
+Reports are generated per run in `Reports/*.html` (ExtentReports) and `test-output/` (native TestNG reports). Failure screenshots are saved to `Screenshots/`. Performance run artifacts are saved per-run under `src/test/resources/apache-jmeter-5.6.3/JMeter reports/` — a timestamped `Performance testing(Github)_<timestamp>.csv` in `Summary reports/`, and a timestamped `Report_<timestamp>/index.html` dashboard in `JMeter html reports/`.
 
 ## Test Coverage (current)
 
 - **UI (`ApplicationTest`)** — 8 scenarios: login page UI, cookie consent dialog + tabs, cookie-popup → privacy policy navigation, password recovery flow, cookie acceptance dismissal, data-driven sign-up, valid login, invalid login.
-- **API (`RepositoryApiTest`)** — 9 scenarios covering the full repository lifecycle: pre-condition check, create, verify creation, get, update, verify update, delete, verify deletion, and negative/error-path checks.
-
+- **API (`FunctionalRepositoryApiTest`)** — 9 scenarios covering the full repository lifecycle: pre-condition check, create, verify creation, get, update, verify update, delete, verify deletion, and negative/error-path checks.
+- **Performance (`PerformanceRepositoryApiTest`)** — JMeter-driven load test against the GitHub Repository API, producing per-run response-time, throughput, APDEX, and error-rate metrics via the generated HTML dashboard.

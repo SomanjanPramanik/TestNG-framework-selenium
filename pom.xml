@@ -10,6 +10,27 @@
 		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.codehaus.groovy</groupId>
+				<artifactId>groovy-xml</artifactId>
+				<version>3.0.20</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.groovy</groupId>
+				<artifactId>groovy</artifactId>
+				<version>3.0.20</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>2.24.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<!-- TestNG -->
 		<dependency>
@@ -18,18 +39,31 @@
 			<version>7.8.0</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- Selenium Java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.43.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.groovy</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.codehaus.groovy</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+
 		<!-- ExtentReports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.1.1</version>
 		</dependency>
+
 		<!-- Apache POI for Excel Handling -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -41,38 +75,83 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
+
 		<!-- Apache PDFBox for PDF Handling -->
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>3.0.5</version>
 		</dependency>
+
 		<!-- Apache Commons IO (For File & Screenshot Management) -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.15.1</version>
 		</dependency>
+
 		<!-- PostgreSQL JDBC Connector -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>42.7.8</version>
 		</dependency>
+
 		<!-- io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>6.0.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.groovy</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.codehaus.groovy</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		<!--json-path for payload-->
-		<!-- Source: https://mvnrepository.com/artifact/org.json/json -->
+
+		<!-- json-path for payload -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20260522</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_core -->
+		<dependency>
+			<groupId>org.apache.jmeter</groupId>
+			<artifactId>ApacheJMeter_core</artifactId>
+			<version>5.6.3</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jmeter</groupId>
+			<artifactId>ApacheJMeter_http</artifactId>
+			<version>5.6.3</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jmeter</groupId>
+			<artifactId>ApacheJMeter_components</artifactId>
+			<version>5.6.3</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.34</version>
+			<scope>compile</scope>
+		</dependency>
+
 		<!-- SLF4J no-op binding: silences "no logging implementation" warning -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -80,6 +159,7 @@
 			<version>2.0.13</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- Log4j2 core: silences "could not find a logging implementation"
 		warning -->
 		<dependency>
@@ -89,6 +169,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<pluginManagement>
 			<plugins>
